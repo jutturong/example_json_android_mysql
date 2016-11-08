@@ -1,6 +1,7 @@
 package com.example.linux.myapplication;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
@@ -152,8 +153,31 @@ public class MainActivity extends Activity {
                         public void onItemClick(AdapterView<?> myAdapter, View myView,
                                                 int position, long mylng) {
 
+
+                            /*
                             Toast.makeText(MainActivity.this,String.valueOf(  MyArrList.get(position).get("EMAIL")
                             .toString()   ),Toast.LENGTH_SHORT).show();
+                            */
+
+
+                            String CUSTOMER_ID = MyArrList.get(position).get("CUSTOMER_ID")
+                                    .toString();
+
+
+                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID + "\n"  );
+
+                            viewDetail.setPositiveButton("OK",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog,
+                                                            int which) {
+                                            // TODO Auto-generated method stub
+                                            dialog.dismiss();
+                                        }
+                                    });
+
+
+                            viewDetail.show();
+
 
 
                         }
