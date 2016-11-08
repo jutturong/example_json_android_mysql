@@ -5,35 +5,40 @@
 
     <TextView
         android:id="@+id/Col_CUSTOMER_ID"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
+
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="CUSTOMER_ID"/>
 
     <TextView
         android:id="@+id/Col_NAME"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
+
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:text="NAME"/>
 
     <TextView
         android:id="@+id/Col_EMAIL"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
+
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="EMAIL" />
 
     <TextView
         android:id="@+id/Col_COUNTRY_CODE"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
+
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="COUNTRY_CODE" />
 
     <TextView
         android:id="@+id/Col_BUDGET"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
+
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="BUDGET" />
@@ -41,7 +46,8 @@
 
     <TextView
         android:id="@+id/Col_USED"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
+       
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="USED" />
