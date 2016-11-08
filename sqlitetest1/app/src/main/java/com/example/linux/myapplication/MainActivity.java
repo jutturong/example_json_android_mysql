@@ -173,12 +173,18 @@ public class MainActivity extends Activity {
                             String COUNTRY_CODE = MyArrList.get(position).get("COUNTRY_CODE")
                                     .toString();
 
+                            String BUDGET = MyArrList.get(position).get("BUDGET")
+                                    .toString();
+
+
+                            String USED = MyArrList.get(position).get("USED")
+                                    .toString();
 
                             viewDetail.setIcon(android.R.drawable.btn_star_big_on);
 
                             viewDetail.setTitle("รายละเอียดของผู้ป่วย");
 
-                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID +  "\n"   +  "  NAME : "   +  NAME  +      "\n"    +  " EMAIL : "    +   EMAIL    + "\n" +  " COUNTRY_CODE : "  + COUNTRY_CODE   + "\n"  );
+                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID +  "\n"   +  "NAME : "   +  NAME  +      "\n"    +  "EMAIL : "    +   EMAIL    + "\n" +  "COUNTRY_CODE : "  + COUNTRY_CODE   + "\n"  + "BUDGET : "+ BUDGET  +  "\n"  +  "USED : "  +  USED );
 
                             viewDetail.setPositiveButton("OK",
                                     new DialogInterface.OnClickListener() {
