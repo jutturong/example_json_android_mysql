@@ -37,6 +37,8 @@ public class MainActivity extends Activity {
 
     //[{"ImageID":"1","ImageName":"Image 1","ImagePath_Thumbnail":"http:\/\/www.thaicreate.com\/android\/img1_thum.jpg","ImagePath_FullPhoto":"http:\/\/www.thaicreate.com\/android\/img1_full.jpg"},{"ImageID":"2","ImageName":"Image 2","ImagePath_Thumbnail":"http:\/\/www.thaicreate.com\/android\/img2_thum.jpg","ImagePath_FullPhoto":"http:\/\/www.thaicreate.com\/android\/img2_full.jpg"},{"ImageID":"3","ImageName":"Image 3","ImagePath_Thumbnail":"http:\/\/www.thaicreate.com\/android\/img3_thum.jpg","ImagePath_FullPhoto":"http:\/\/www.thaicreate.com\/android\/img3_full.jpg"},{"ImageID":"4","ImageName":"Image 4","ImagePath_Thumbnail":"http:\/\/www.thaicreate.com\/android\/img4_thum.jpg","ImagePath_FullPhoto":"http:\/\/www.thaicreate.com\/android\/img4_full.jpg"},{"ImageID":"5","ImageName":"Image 5","ImagePath_Thumbnail":"http:\/\/www.thaicreate.com\/android\/img5_thum.jpg","ImagePath_FullPhoto":"http:\/\/www.thaicreate.com\/android\/img5_full.jpg"},{"ImageID":"6","ImageName":"Image 6","ImagePath_Thumbnail":"http:\/\/www.thaicreate.com\/android\/img6_thum.jpg","ImagePath_FullPhoto":"http:\/\/www.thaicreate.com\/android\/img6_full.jpg"}]
 
+    public String ip="http://10.87.196.170/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,9 +82,10 @@ public class MainActivity extends Activity {
                 //http://localhost/json1.php
                 //http://www.thaicreate.com/mobile/android-json-from-url.html
 
-                String   url2 = "http://192.168.2.112/json1.php";
+
+                String   url2 =  ip + "json1.php";
                  //http://192.168.2.112/dental/index.php/json/json1
-                String   url3 = "http://192.168.2.112/dental/index.php/json/json1";
+                String   url3 =   "http://10.87.196.170/dental/index.php/welcome/json_tb1/";
 
 
                 try {
@@ -95,7 +98,7 @@ public class MainActivity extends Activity {
 
                         //ImageName
 
-                        Toast.makeText(MainActivity.this,String.valueOf( c.getString("ImagePath_FullPhoto") ),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,String.valueOf( c.getString("HN") ),Toast.LENGTH_SHORT).show();
 
                     }
 
