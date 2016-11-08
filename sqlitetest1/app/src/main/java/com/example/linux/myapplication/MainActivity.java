@@ -166,12 +166,19 @@ public class MainActivity extends Activity {
                             String NAME = MyArrList.get(position).get("NAME")
                                     .toString();
 
+                            String EMAIL = MyArrList.get(position).get("EMAIL")
+                                    .toString();
+
+
+                            String COUNTRY_CODE = MyArrList.get(position).get("COUNTRY_CODE")
+                                    .toString();
+
 
                             viewDetail.setIcon(android.R.drawable.btn_star_big_on);
 
                             viewDetail.setTitle("รายละเอียดของผู้ป่วย");
 
-                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID +   "NAME"  +  NAME  +  "\n"  );
+                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID +  "\n"   +  "  NAME : "   +  NAME  +      "\n"    +  " EMAIL : "    +   EMAIL    + "\n" +  " COUNTRY_CODE : "  + COUNTRY_CODE   + "\n"  );
 
                             viewDetail.setPositiveButton("OK",
                                     new DialogInterface.OnClickListener() {
