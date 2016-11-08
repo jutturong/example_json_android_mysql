@@ -87,7 +87,13 @@ public class MainActivity extends Activity {
                  //http://192.168.2.112/dental/index.php/json/json1
                 // public String ip="http://10.87.196.170/";
 
-                String   url3 =  ip  + "dental/index.php/welcome/json_tb1/";
+                //http://10.87.196.170/dental/index.php/json/json3/
+               // String   url3 =  ip  + "dental/index.php/welcome/json_tb1/";
+                String   url3 =  ip  + "dental/index.php/json/json3/";
+
+                /*
+                [{"CUSTOMER_ID":"C001","NAME":"Win Weerachai","EMAIL":"win.weerachai@thaicreate.com","COUNTRY_CODE":"TH","BUDGET":"1000000.00","USED":"600000.00"},{"CUSTOMER_ID":"C002","NAME":"John Smith","EMAIL":"john.smith@thaicreate.com","COUNTRY_CODE":"UK","BUDGET":"2000000.00","USED":"800000.00"},{"CUSTOMER_ID":"C003","NAME":"Jame Born","EMAIL":"jame.born@thaicreate.com","COUNTRY_CODE":"US","BUDGET":"3000000.00","USED":"600000.00"},{"CUSTOMER_ID":"C004","NAME":"Chalee Angel","EMAIL":"chalee.angel@thaicreate.com","COUNTRY_CODE":"US","BUDGET":"4000000.00","USED":"100000.00"}]
+                 */
 
 
                 try {
@@ -99,8 +105,9 @@ public class MainActivity extends Activity {
                       //  Toast.makeText(MainActivity.this,String.valueOf( c.getString("Name") ),Toast.LENGTH_SHORT).show();
 
                         //ImageName
+                        //NAME
 
-                        Toast.makeText(MainActivity.this,String.valueOf( c.getString("HN") ),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,String.valueOf(  c.getString("CUSTOMER_ID")  +   "  "   +  c.getString("NAME")  ),Toast.LENGTH_SHORT).show();
 
                     }
 
