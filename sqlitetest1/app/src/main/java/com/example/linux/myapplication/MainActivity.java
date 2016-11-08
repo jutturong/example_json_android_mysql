@@ -6,6 +6,8 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -23,6 +25,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends Activity {
 
@@ -50,6 +54,7 @@ public class MainActivity extends Activity {
             StrictMode.setThreadPolicy(policy);
         }
 
+        final ListView listView1=(ListView) findViewById(R.id.listView1);
 
         final Button btn1=(Button) findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener(){
@@ -99,19 +104,44 @@ public class MainActivity extends Activity {
                 try {
                     JSONArray data = new JSONArray(getJSONUrl(url3));
 
+
+                    final ArrayList<HashMap<String, String>> MyArrList = new ArrayList<HashMap<String, String>>();
+                    HashMap<String, String> map;
+
+
                     for(int i = 0; i < data.length(); i++){
                         JSONObject c = data.getJSONObject(i);
 
                       //  Toast.makeText(MainActivity.this,String.valueOf( c.getString("Name") ),Toast.LENGTH_SHORT).show();
 
-                        //ImageName
+                        //CUSTOMER_ID
                         //NAME
+                        //EMAIL
+                        //COUNTRY_CODE
+                        //BUDGET
+                        //USED
+
+
+                        map = new HashMap<String, String>();
+                        map.put("CUSTOMER_ID", c.getString("CUSTOMER_ID"));
+                        map.put("NAME", c.getString("NAME"));
+                        map.put("EMAIL", c.getString("EMAIL"));
+                        map.put("COUNTRY_CODE", c.getString("COUNTRY_CODE"));
+                        map.put("BUDGET", c.getString("BUDGET"));
+                        map.put("USED", c.getString("USED"));
+                        MyArrList.add(map);
+
 
                         Toast.makeText(MainActivity.this,String.valueOf(  c.getString("CUSTOMER_ID")  +   "  "   +  c.getString("NAME")  ),Toast.LENGTH_SHORT).show();
 
                     }
 
 
+                    SimpleAdapter sAdap;
+                    sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
+                            new String[] {"CUSTOMER_ID", "Name", "Tel"}, new int[] {R.id.Col_CUSTOMER_ID, R.id.ColName, R.id.ColTel});
+
+                    listView1.setAdapter(sAdap);
 
 
 
