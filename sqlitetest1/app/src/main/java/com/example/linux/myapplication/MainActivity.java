@@ -3,8 +3,10 @@ package com.example.linux.myapplication;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -55,6 +57,8 @@ public class MainActivity extends Activity {
         }
 
         final ListView listView1=(ListView) findViewById(R.id.listView1);
+
+        final AlertDialog.Builder viewDetail = new AlertDialog.Builder(this);
 
         final Button btn1=(Button) findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener(){
@@ -132,7 +136,7 @@ public class MainActivity extends Activity {
                         MyArrList.add(map);
 
 
-                        Toast.makeText(MainActivity.this,String.valueOf(  c.getString("CUSTOMER_ID")  +   "  "   +  c.getString("NAME")  ),Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(MainActivity.this,String.valueOf(  c.getString("CUSTOMER_ID")  +   "  "   +  c.getString("NAME")  ),Toast.LENGTH_SHORT).show();
 
                     }
 
@@ -143,6 +147,17 @@ public class MainActivity extends Activity {
 
                     listView1.setAdapter(sAdap);
 
+                    listView1.setOnItemClickListener(new AdapterView.OnItemClickListener()
+                    {
+                        public void onItemClick(AdapterView<?> myAdapter, View myView,
+                                                int position, long mylng) {
+
+                            Toast.makeText(MainActivity.this,String.valueOf(  MyArrList.get(position).get("EMAIL")
+                            .toString()   ),Toast.LENGTH_SHORT).show();
+
+
+                        }
+                    });
 
 
                 }catch (JSONException e) {
