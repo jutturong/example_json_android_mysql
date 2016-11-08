@@ -85,7 +85,9 @@ public class MainActivity extends Activity {
 
                 String   url2 =  ip + "json1.php";
                  //http://192.168.2.112/dental/index.php/json/json1
-                String   url3 =   "http://10.87.196.170/dental/index.php/welcome/json_tb1/";
+                // public String ip="http://10.87.196.170/";
+
+                String   url3 =  ip  + "dental/index.php/welcome/json_tb1/";
 
 
                 try {
