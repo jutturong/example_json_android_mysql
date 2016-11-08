@@ -139,7 +139,7 @@ public class MainActivity extends Activity {
 
                     SimpleAdapter sAdap;
                     sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
-                            new String[] {"CUSTOMER_ID", "Name", "Tel"}, new int[] {R.id.Col_CUSTOMER_ID, R.id.ColName, R.id.ColTel});
+                            new String[] {"CUSTOMER_ID", "NAME", "EMAIL" , "COUNTRY_CODE" }, new int[] {R.id.Col_CUSTOMER_ID, R.id.Col_NAME, R.id.Col_EMAIL ,R.id.Col_COUNTRY_CODE});
 
                     listView1.setAdapter(sAdap);
 
