@@ -51,3 +51,29 @@ http://www.thaicreate.com/mobile/android-json-from-url.html
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+#------------ link ล่าสุด-  json php  android  image -------
+
+http://www.thaicreate.com/mobile/android-json-from-url.html
+
+SELECT *
+FROM `member`
+LIMIT 0 , 30
+
+http://192.168.2.112/dental/index.php/json/json3/
+
+     # http://localhost/dental/index.php/json/json2
+               public function json2()
+               {
+                   $tb="member";
+                   $q=$this->db->get($tb);
+                     foreach($q->result() as $row)
+                    {
+                        $rows[]=$row;
+                    }
+                    echo   json_encode($rows);
+               }
+
+
+
+
