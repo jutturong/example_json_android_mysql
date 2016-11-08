@@ -163,8 +163,15 @@ public class MainActivity extends Activity {
                             String CUSTOMER_ID = MyArrList.get(position).get("CUSTOMER_ID")
                                     .toString();
 
+                            String NAME = MyArrList.get(position).get("NAME")
+                                    .toString();
 
-                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID + "\n"  );
+
+                            viewDetail.setIcon(android.R.drawable.btn_star_big_on);
+
+                            viewDetail.setTitle("รายละเอียดของผู้ป่วย");
+
+                            viewDetail.setMessage("CUSTOMER_ID : " + CUSTOMER_ID +   "NAME"  +  NAME  +  "\n"  );
 
                             viewDetail.setPositiveButton("OK",
                                     new DialogInterface.OnClickListener() {
