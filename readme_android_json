@@ -60,7 +60,7 @@ SELECT *
 FROM `member`
 LIMIT 0 , 30
 
-http://192.168.2.112/dental/index.php/json/json3/
+
 
      # http://localhost/dental/index.php/json/json2
                public function json2()
