@@ -74,6 +74,141 @@ LIMIT 0 , 30
                     echo   json_encode($rows);
                }
 
+##------------ เพิ่มเติม ------------------------
+http://www.thaicreate.com/mobile/android-json-from-url.html
+
+
+*AndroidManifest.xml
+ </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+*MainActivity.java
+
+
+   public  String  url="http://10.87.196.170/dental/index.php/json/json1";
+
+
+
+// Permission StrictMode
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
+
+try {
+
+                    JSONArray data = new JSONArray(getJSONUrl(url));
+
+                    //  Toast.makeText(MainActivity.this,String.valueOf(  data.length()  ),Toast.LENGTH_SHORT).show();
+
+                    final ArrayList<HashMap<String, String>> MyArrList = new ArrayList<HashMap<String, String>>();
+                    HashMap<String, String> map;
+
+
+                    for(int i = 0; i < data.length(); i++){
+                        JSONObject c = data.getJSONObject(i);
+
+
+                        map = new HashMap<String, String>();
+                        map.put("ImageID", c.getString("ImageID"));
+                        map.put("ImageDesc", c.getString("ImageDesc"));
+                        map.put("ImagePath", c.getString("ImagePath"));
+                        MyArrList.add(map);
+
+
+
+                        Toast.makeText(MainActivity.this,String.valueOf(  c.getString("ImagePath") ),Toast.LENGTH_SHORT).show();
+
+                    }
+
+
+
+
+
+
+
+
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+
+
+
+ public String getJSONUrl(String url) {
+        StringBuilder str = new StringBuilder();
+        HttpClient client = new DefaultHttpClient();
+        HttpGet httpGet = new HttpGet(url);
+        try {
+            HttpResponse response = client.execute(httpGet);
+            StatusLine statusLine = response.getStatusLine();
+            int statusCode = statusLine.getStatusCode();
+            if (statusCode == 200) { // Download OK
+                HttpEntity entity = response.getEntity();
+                InputStream content = entity.getContent();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    str.append(line);
+                }
+            } else {
+                Log.e("Log", "Failed to download result..");
+            }
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return str.toString();
+    }
+
+
+*build.gradle
+
+   useLibrary 'org.apache.http.legacy'
+
+เพิ่มเติม 
+  apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.example.linux.myapplication"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+}
+
+
+
+
+
 
 
 
