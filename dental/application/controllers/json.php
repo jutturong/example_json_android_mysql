@@ -16,7 +16,7 @@ class Json extends CI_Controller {
                #http://localhost/dental/index.php/json/json1
                public function json1()
                {
-                    $tb="images";
+                    $tb="image";
                     $q=$this->db->get($tb);
                     foreach($q->result() as $row)
                     {
