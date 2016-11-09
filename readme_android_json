@@ -40,9 +40,7 @@ final Button btn1=(Button) findViewById(R.id.btn1);
             }
         });
 
-http://www.thaicreate.com/mobile/android-json-from-url.html
 
-    link
 http://www.thaicreate.com/mobile/android-json-from-url.html
 
 
@@ -206,9 +204,15 @@ dependencies {
 }
 
 #--------------- โปรแกรมสมุนไพร
+http://www.thaicreate.com/mobile/android-json-from-url.html
+
 http://192.168.2.112/dental/index.php/json/tb_herb
 
+autocomplete  sqlite
+http://www.thaicreate.com/mobile/android-sqlite-autocompletetextview.html
 
+autocomplete html
+http://www.thaicreate.com/mobile/android-autocompletetextview.html
 
 
 
