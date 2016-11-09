@@ -18,12 +18,12 @@
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:id="@+id/btn1"
-        android:text="connect DB"
+        android:text="โหลดสารบัญ"
         />
 
 
     <ListView
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="90dp"
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

@@ -1,17 +1,14 @@
 package com.example.linux.myapplication;
 
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.SimpleAdapter;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -33,7 +30,7 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    public  String  url="http://10.87.196.170/dental/index.php/json/json1";
+    public  String  url="http://192.168.2.112/dental/index.php/json/tb_herb";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,20 +68,24 @@ public class MainActivity extends AppCompatActivity {
 
 
                         map = new HashMap<String, String>();
-                        map.put("ImageID", c.getString("ImageID"));
-                        map.put("ImageDesc", c.getString("ImageDesc"));
-                        map.put("ImagePath", c.getString("ImagePath"));
+                        map.put("name", c.getString("name"));
+                        map.put("name_sci", c.getString("name_sci"));
+                        map.put("name_local", c.getString("name_local"));
+
+
                         MyArrList.add(map);
 
 
 
-                        Toast.makeText(MainActivity.this,String.valueOf(  c.getString("ImagePath") ),Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(MainActivity.this,String.valueOf(  c.getString("name") ),Toast.LENGTH_SHORT).show();
 
                     }
 
+                    SimpleAdapter sAdap;
 
-
-
+                    sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
+                            new String[] {"name", "name_sci", }, new int[] {R.id.Col_name, R.id.Col_name_sci, });
+                    listView1.setAdapter(sAdap);
 
 
 
