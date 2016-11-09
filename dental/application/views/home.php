@@ -9,20 +9,11 @@
         <?=$this->load->view("import_")?>
 
 
-      <script type="text/javascript">
-           function format1()
-           {
-              //  return '<span style="color:red;"></span>'
-              // return '<span style=color:red></span>';
-           }
-      </script>
-
-
         <script type="text/javascript">
-
+            
               var toolbar= [
 
-
+                       
                        {
                         text: ' เรียกดูประวัติผู้ป่วย',
                         iconCls: 'icon-large-chart',
@@ -34,109 +25,109 @@
                                if(row)
                                {
                                     //------ clar form ------------------
-                                      $('#HN').textbox('setValue','');
-                                      $('#DN').textbox('setValue','');
-                                      $('#othnumber').textbox('setValue','');
-                                       $('#CN').textbox('setValue','');
+                                      $('#HN').textbox('setValue','');       
+                                      $('#DN').textbox('setValue','');   
+                                      $('#othnumber').textbox('setValue','');   
+                                       $('#CN').textbox('setValue','');   
                                        //   $seriesnumber=trim($this->input->get_post("seriesnumber"));  //บัตรประชนชน  //6
-                                       $('#seriesnumber').textbox('setValue','');
-
+                                       $('#seriesnumber').textbox('setValue','');   
+                                      
                                         //$firstname=trim($this->input->get_post("firstname"));  //ชื่อ  //7
-                                          $('#firstname').textbox('setValue','');
+                                          $('#firstname').textbox('setValue','');   
                                         //$lastname=trim($this->input->get_post("lastname"));  //นามสกุล  //8
-                                         $('#lastname').textbox('setValue','');
-
+                                         $('#lastname').textbox('setValue','');   
+                                         
                                         //$birthdate=trim($this->input->get_post("birthdate"));  //วัน/เดือน/ปี เกิด :  09/14/2016 08:45:29      //10
-                                          $('#birthdate').textbox('setValue','');
-
+                                          $('#birthdate').textbox('setValue','');   
+                                          
            //$address=trim($this->input->get_post("address"));  //ที่อยู่ :     //11
-           $('#address').textbox('setValue','');
+           $('#address').textbox('setValue','');  
 
            //  $nationality=trim($this->input->get_post("nationality")); //สัญชาติ :    //12
-            $('#nationality').textbox('setValue','');
-
+            $('#nationality').textbox('setValue','');    
+ 
             // $race=trim($this->input->get_post("race")); //เชื้อชาติ :    //13
-            $('#race').textbox('setValue','');
+            $('#race').textbox('setValue','');    
 
              // $religion=trim($this->input->get_post("religion")); //ศาสนา :    //14
-            $('#religion').textbox('setValue','');
+            $('#religion').textbox('setValue','');    
 
             // $namefather=trim($this->input->get_post('namefather')); //ชื่อบิดา    //15
-           $('#namefather').textbox('setValue','');
+           $('#namefather').textbox('setValue','');   
 
            //  $fatherlastname=trim($this->input->get_post("fatherlastname")); //บิดา - นามสกุล :   //16
-          $('#fatherlastname').textbox('setValue','');
-
+          $('#fatherlastname').textbox('setValue','');   
+            
             //  $career=trim($this->input->get_post("career")); //อาชีพ :   //17
-           $('#career').textbox('setValue','');
-
+           $('#career').textbox('setValue','');   
+            
            //   $birthdatefahter=trim($this->input->get_post("birthdatefahter"));  //วัน/เดือน/ปี เกิด : บิดา
-               $('#birthdatefahter').textbox('setValue','');
-
+               $('#birthdatefahter').textbox('setValue','');      
+               
              //    $age1=trim($this->input->get_post("age1")); //อายุบิดา   //19
-              $('#age1').textbox('setValue','');
-
+              $('#age1').textbox('setValue','');      
+            
             //  $disease=trim($this->input->get_post("disease"));  //โรคประจำตัวบิดา :    //20
             //echo "<br>";
-              $('#disease').textbox('setValue','');
-
-
+              $('#disease').textbox('setValue','');     
+              
+              
            //   $mothername=trim($this->input->get_post("mothername"));  //ชื่อมารดา    //21
             //echo "<br>";
-              $('#mothername').textbox('setValue','');
-
+              $('#mothername').textbox('setValue','');     
+            
            //  $motherlastname=trim($this->input->get_post("motherlastname"));  // - นามสกุล   //22
             //echo "<br>";
-             $('#motherlastname').textbox('setValue','');
-
+             $('#motherlastname').textbox('setValue','');     
+             
           //   $mothercareer =trim($this->input->get_post("mothercareer")); //อาชีพ : มารดา  //23
             //echo "<br>";
-               $('#mothercareer').textbox('setValue','');
-
+               $('#mothercareer').textbox('setValue','');     
+               
            //   $birthdatemother=trim($this->input->get_post('birthdatemother')); // //วัน/เดือน/ปี เกิด : มารดา
             //echo "<br>";
-               $('#birthdatemother').textbox('setValue','');
-
-
+               $('#birthdatemother').textbox('setValue','');     
+               
+               
                  //   $age2=trim($this->input->get_post("age2")); //อายุมารดา    //25
-               $('#age2').textbox('setValue','');
-
-
+               $('#age2').textbox('setValue','');     
+            
+            
             //  $diseasemother=trim($this->input->get_post("diseasemother"));  //โรคประจำตัวมารดา :    //26
-            $('#diseasemother').textbox('setValue','');
-
-
+            $('#diseasemother').textbox('setValue','');    
+            
+            
               // $spousename=trim($this->input->get_post("spousename"));  //ชื่อ สามี/ภรรยา - นามสกุล :    //27
-            $('#spousename').textbox('setValue','');
-
+            $('#spousename').textbox('setValue','');    
+             
              // $spouselastname=trim($this->input->get_post("spouselastname"));   //ชื่อ  นามสกุล :    //28
-               $('#spouselastname').textbox('setValue','');
-
+               $('#spouselastname').textbox('setValue','');    
+             
             //  $benefits=trim($this->input->get_post('benefits'));  //สวัสดิการการรักษา   //29
-              $('#benefits').textbox('setValue','');
-
+              $('#benefits').textbox('setValue','');    
+             
            //   $otherbenefits=trim($this->input->get_post("otherbenefits"));  //สวัสดิการการรักษา  อื่นๆ    //30
-              $('#otherbenefits').textbox('setValue','');
-
+              $('#otherbenefits').textbox('setValue','');    
+                
              // $numberbenefits=trim($this->input->get_post("numberbenefits"));    //หมายเลข :   //31
-               $('#numberbenefits').textbox('setValue','');
-
+               $('#numberbenefits').textbox('setValue','');    
+                 
              //  $evertreat=trim($this->input->get_post('evertreat'));     // เคยได้รับการรักษามาก่อน :   1=ไม่ทราบ   2=ไม่เคย  3=เคย ระบุ      //32
-              $('#evertreat').textbox('setValue','');
-
+              $('#evertreat').textbox('setValue','');    
+             
              //  $otherevertreat=trim($this->input->get_post("otherevertreat"));   //เคย ระบุ    //33
-               $('#otherevertreat').textbox('setValue','');
-
+               $('#otherevertreat').textbox('setValue','');    
+             
                //$treatmentfacility=trim($this->input->get_post('treatmentfacility'));   // สถานที่ที่ได้รับการรักษามาก่อน :     //34
-               $('#treatmentfacility').textbox('setValue','');
-
+               $('#treatmentfacility').textbox('setValue','');    
+             
              //  $doctor=trim($this->input->get_post("doctor"));  // แพทย์เจ้าของคนไข้ :      //35
-                $('#doctor').textbox('setValue','');
-
-
+                $('#doctor').textbox('setValue','');    
+              
+               
                                      //------ clar form ------------------
                                      id=row.id_history_patient;
-
+                                   
                                      // alert(id);
                                        //  //openpt('เรียกดูประวัติผู้ป่วย');
                                        //-------------------------------------------------
@@ -172,13 +163,13 @@
                                                                  modal:true,
 
                                                              });
-
-
+                                                             
+                                                             
                                                              //------------ แสดงการบันทึกข้อมูล-------------------
                                                              if( id > 0 )
                                                              {
-
-
+                                                                  
+                                                                   
                                                                    /*
                                                                    var  url='<?=base_url()?>index.php/welcome/call_history_patient/' + id;
                                                                    $.post(url,{ id_history_patient:id },function(data)
@@ -186,25 +177,25 @@
                                                                              //alert(data);
                                                                               $.each(data,function(index,key)
                                                                                 {
-
+                                                                                     
                                                                                         var  HN=key.HN;
                                                                                         // alert( HN );
                                                                                         //    fr_view_patient
-                                                                                       //HN_view
+                                                                                       //HN_view   
                                                                                        $('#HN_view').textbox('setValue',HN);
                                                                                      //  var  DN=key.DN
-
+  
                                                                                 });
-
-
-                                                                      },'json');
+                                                                                
+                                                                                      
+                                                                      },'json'); 
                                                                   */
                                                                    //  alert(id);
-                                                                    view_patient(id);
-
+                                                                    view_patient(id);   
+                                                                 
                                                              }
-
-
+                            
+                                       
                                }
                         }
 
@@ -219,7 +210,7 @@
                                var  row=   $('#dg1').datagrid('getSelected');    //productid
                                 if( row )
                                 {
-                                      var  id=row.id_history_patient;
+                                      var  id=row.id_history_patient;  
                                       var  	firstname=row.firstname;
                                       var    lastname=row.lastname;
                                      //  alert(id);
@@ -227,18 +218,18 @@
                                     //  showpopup1();
                                      //  showpopup1();
                                       // id="id_history_patient"
-
+                                      
                                        $('#id_history_patient_diag').textbox('setValue','');
-
+                                      
                                       $('#diag1').window('open');  //file-> fr_diagnosis.php
                                       $('#id_history_patient_diag').textbox('setValue',id);
                                       $('#name_lastname_diag').textbox('setValue',firstname+'  '+lastname);
-
-
+                                      
+                                      
                                        $('#grid_diagnosis').datagrid(  {   url:'<?=base_url()?>index.php/welcome/json_tb2/' +   id   }  );
 
                                      // btnclr();
-
+                                      
                                  }
                         }
                     },
@@ -253,48 +244,39 @@
                             if( row )
                              {
                                     //alert(row);
-                                    var  id=row.id_history_patient;
+                                    var  id=row.id_history_patient;  
                                     var   firstname=row.firstname;
                                     var    lastname=row.lastname;
-
+                                      
                                      var  br=row.birthdate;
                                       //alert(birthdate);
                                        var ex1=br.split("-");
                                        //alert(ex1[0]);
-
+                                       
                                        var  d=new Date();
                                        var  n=d.getFullYear();
                                       // alert(n);
-
-                                      // alert(ex1[1]);  //ระบุเดือน เกิด
-
-                                       //-------------- clear textbox-----------
-                                       $('#age1_fr1').textbox('setValue', '' ); //อายุเป็นเดือน
-                                       $('#age2_fr1').textbox('setValue','' );
-
+                                       
                                        //--------- คำนวณอายุ-------------------
                                        if(  n >=  ex1[0]   &&  ex1[0] > 0  )
                                        {
                                             var  calage= n - ex1[0];
                                            // alert(  calage );
-
+                                           
                                            //----------- fr1------------------------------------------
                                         //   $('#age1_fr1').textbox('setValue',calage);
                                        //    $('#age2_fr1').textbox('setValue',calage);
-
-                                                // $('#y_fr1').textbox('setValue',ex1[0]); //ของเดิมคือส่ง ปีเกิด
-                                                 $('#y_fr1').textbox('setValue',ex1[1]); //ของเดิมคือส่ง เดือน
-
+                                            $('#y_fr1').textbox('setValue',ex1[0]);
                                             //<input class="easyui-textbox"  id="y_fr1"   name="y_fr1"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-
+                                           
+                                           
+                                           
                                            //------------ fr4-----------------------------------------
                                           // $('#age1_fr4').textbox('setValue',calage);
                                          //  $('#age2_fr4').textbox('setValue',calage);   91  5122
                                           //<input class="easyui-textbox"  id="y_fr4"   name="y_fr4"  style="width:50px;height: 30px;"  readonly="true"  />   5192
                                              $('#y_fr4').textbox('setValue',ex1[0]);  //5198
-
+                                           
                                            //-------------fr6-----------------------------------------
                                            // $('#age1_fr6').textbox('setValue',calage);
                                           //  <input class="easyui-textbox"  id="y_fr6"   name="y_fr6"  style="width:50px;height: 30px;"  readonly="true"  />  4428
@@ -303,208 +285,208 @@
                                            $('#y_fr6').textbox('setValue',ex1[0]);  //4432
                                            $('#y_fr6_2').textbox('setValue',ex1[0]);  //4432
                                            $('#y_fr6_3').textbox('setValue',ex1[0]);  //4432
-
+                                            
                                             //-------------fr7-----------------------------------------
-                                         //   $('#age1_fr7').textbox('setValue',calage);
-                                         //   $('#age2_fr7').textbox('setValue',calage);
+                                         //   $('#age1_fr7').textbox('setValue',calage); 
+                                         //   $('#age2_fr7').textbox('setValue',calage); 
                                              //<input class="easyui-textbox"  id="y_fr7"   name="y_fr7"  style="width:50px;height: 30px;"  readonly="true"  />  //3575
                                              $('#y_fr7').textbox('setValue',ex1[0]);   //3575
-
+                                             
                                               //-------------fr8-----------------------------------------
-                                          //  $('#age1_fr8').textbox('setValue',calage);
-                                          //  $('#age2_fr8').textbox('setValue',calage);
+                                          //  $('#age1_fr8').textbox('setValue',calage); 
+                                          //  $('#age2_fr8').textbox('setValue',calage); 
                                             $('#y_fr8').textbox('setValue',ex1[0]);   //3575
                                              //<input class="easyui-textbox"  id="y_fr8"   name="y_fr8"  style="width:50px;height: 30px;"  readonly="true"  />  //3575
-
+                                            
                                              //-------------fr9-----------------------------------------
-                                        //    $('#age1_fr9').textbox('setValue',calage);
+                                        //    $('#age1_fr9').textbox('setValue',calage); 
                                          //   $('#age1_fr9_2').textbox('setValue',calage);
                                        //     $('#age2_fr9_2').textbox('setValue',calage);
                                                $('#y_fr9').textbox('setValue',ex1[0]);   //3575
                                              //<input class="easyui-textbox"  id="y_fr9"   name="y_fr9"  style="width:50px;height: 30px;"  readonly="true"  />  //3575
                                                $('#y_fr9_2').textbox('setValue',ex1[0]);   //3575
-                                             //<input class="easyui-textbox"  id="y_fr9_2"   name="y_fr9_2"  style="width:50px;height: 30px;"  readonly="true"  />
-
-                                             //-------------fr10-----------------------------------------
+                                             //<input class="easyui-textbox"  id="y_fr9_2"   name="y_fr9_2"  style="width:50px;height: 30px;"  readonly="true"  />      
+                                                   
+                                             //-------------fr10----------------------------------------- 
                                          //    $('#age1_fr10_1').textbox('setValue',calage);
                                          //    $('#age1_fr10_2').textbox('setValue',calage);
                                          //age1_fr10_1
                                           $('#y_fr10_1').textbox('setValue',ex1[0]);   //3575
                                           //<input class="easyui-textbox"  id="y_fr10_1"   name="y_fr10_1"  style="width:50px;height: 30px;"  readonly="true"  />
-
+                                          
                                           //<input class="easyui-textbox"  id="id_history_patient_fr10_2"   name="id_history_patient_fr10_2"  style="width:30px;height: 30px;"  readonly="true"  />
-                                          $('#y_fr10_2').textbox('setValue',ex1[0]);
-                                         //<input class="easyui-textbox"  id="y_fr10_1"   name="y_fr10_1"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-                                          $('#y_fr10_3').textbox('setValue',ex1[0]);
-                                         //<input class="easyui-textbox"  id="y_fr10_3"   name="y_fr10_3"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-                                           // id="id_history_patient_fr10_4"
-                                          $('#y_fr10_4').textbox('setValue',ex1[0]);
-                                         //<input class="easyui-textbox"  id="y_fr10_4"   name="y_fr10_4"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
+                                          $('#y_fr10_2').textbox('setValue',ex1[0]);          
+                                         //<input class="easyui-textbox"  id="y_fr10_1"   name="y_fr10_1"  style="width:50px;height: 30px;"  readonly="true"  />           
+                                          
+                                          
+                                          $('#y_fr10_3').textbox('setValue',ex1[0]);       
+                                         //<input class="easyui-textbox"  id="y_fr10_3"   name="y_fr10_3"  style="width:50px;height: 30px;"  readonly="true"  />    
+                                          
+                                          
+                                           // id="id_history_patient_fr10_4"  
+                                          $('#y_fr10_4').textbox('setValue',ex1[0]);    
+                                         //<input class="easyui-textbox"  id="y_fr10_4"   name="y_fr10_4"  style="width:50px;height: 30px;"  readonly="true"  />    
+                                  
+                                  
                                            //id="id_history_patient_fr10_5"
-                                           $('#y_fr10_5').textbox('setValue',ex1[0]);
-                                        //<input class="easyui-textbox"  id="y_fr10_5"   name="y_fr10_5"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-                                        // id="id_history_patient_fr10_6"
-                                         $('#y_fr10_6').textbox('setValue',ex1[0]);
-                                        //<input class="easyui-textbox"  id="y_fr10_6"   name="y_fr10_6"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-
-
-
-                                            //-------------fr1-----------------------------------------
+                                           $('#y_fr10_5').textbox('setValue',ex1[0]);    
+                                        //<input class="easyui-textbox"  id="y_fr10_5"   name="y_fr10_5"  style="width:50px;height: 30px;"  readonly="true"  />    
+                                        
+                                        
+                                        // id="id_history_patient_fr10_6" 
+                                         $('#y_fr10_6').textbox('setValue',ex1[0]);   
+                                        //<input class="easyui-textbox"  id="y_fr10_6"   name="y_fr10_6"  style="width:50px;height: 30px;"  readonly="true"  />  
+                                        
+                                
+                                         
+                                         
+                                        
+                                            //-------------fr1----------------------------------------- 
                                             // $('#age1_fr11_1').textbox('setValue',calage);
                                             // $('#age1_fr11_2').textbox('setValue',calage);
-
-
+                                             
+                                             
                                          //id="id_history_patient_fr11_1"
-                                         $('#y_fr11_1').textbox('setValue',ex1[0]);
-                                         //<input class="easyui-textbox"  id="y_fr11_1"   name="y_fr11_1"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-                                          $('#y_fr11_2').textbox('setValue',ex1[0]);
-                                         //<input class="easyui-textbox"  id="y_fr11_2"   name="y_fr11_2"  style="width:50px;height: 30px;"  readonly="true"  />
-
-
-
+                                         $('#y_fr11_1').textbox('setValue',ex1[0]);   
+                                         //<input class="easyui-textbox"  id="y_fr11_1"   name="y_fr11_1"  style="width:50px;height: 30px;"  readonly="true"  />  
+                                         
+ 
+                                          $('#y_fr11_2').textbox('setValue',ex1[0]); 
+                                         //<input class="easyui-textbox"  id="y_fr11_2"   name="y_fr11_2"  style="width:50px;height: 30px;"  readonly="true"  />  
+                                           
+                                           
+                                           
                                        }
-
-                                  //-----1. Pre-surgical orthopedics therapy (PSOT)---------
+                                  
+                                  //-----1. Pre-surgical orthopedics therapy (PSOT)--------- 
                                       $('#id_history_patient').textbox('setValue',id);
                                       $('#name_lastname').textbox('setValue',firstname+'  '+lastname);
-
-
-
-                                 //--------6. Interceptive orthodontic treatment -------------
+                                      
+                                      
+                                      
+                                 //--------6. Interceptive orthodontic treatment -------------   
                                       $('#id_history_patient_fr4').textbox('setValue',id);
                                       $('#name_lastname_fr4').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr6').textbox('setValue',id);
                                       $('#name_lastname_fr6').textbox('setValue',firstname+'  '+lastname);
-
-
+                                      
+                                      
                                       $('#id_history_patient_fr6_2').textbox('setValue',id);
                                       $('#name_lastname_fr6_2').textbox('setValue',firstname+'  '+lastname);
-
-
+                                      
+                                      
                                       $('#id_history_patient_fr6_3').textbox('setValue',id);
                                       $('#name_lastname_fr6_3').textbox('setValue',firstname+'  '+lastname);
-
-                                             //-------- 7. Growth modification t -------------
+                                      
+                                             //-------- 7. Growth modification t -------------   
                                       $('#id_history_patient_fr7').textbox('setValue',id);
                                       $('#name_lastname_fr7').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr7').textbox('setValue',id);
-                                      $('#name_lastname_fr7').textbox('setValue',firstname+'  '+lastname);
-
+                                      $('#name_lastname_fr7').textbox('setValue',firstname+'  '+lastname);   
+                                      
                                       //--------8. Corrective Orthodontic Treatment -----------
                                       $('#id_history_patient_fr8').textbox('setValue',id);
                                       $('#name_lastname_fr8').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr8').textbox('setValue',id);
-                                      $('#name_lastname_fr8').textbox('setValue',firstname+'  '+lastname);
-
+                                      $('#name_lastname_fr8').textbox('setValue',firstname+'  '+lastname);   
+                                      
                                                 //--------9. Orthognathic surgery -----------
                                       $('#id_history_patient_fr9').textbox('setValue',id);
                                       $('#name_lastname_fr9').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr9').textbox('setValue',id);
-                                      $('#name_lastname_fr9').textbox('setValue',firstname+'  '+lastname);
-
+                                      $('#name_lastname_fr9').textbox('setValue',firstname+'  '+lastname);  
+                                      
                                       //--------9. Orthognathic surgery ---Distraction--------
                                       $('#id_history_patient_fr9_2').textbox('setValue',id);
                                       $('#name_lastname_fr9_2').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr9_2').textbox('setValue',id);
-                                      $('#name_lastname_fr9_2').textbox('setValue',firstname+'  '+lastname);
-
+                                      $('#name_lastname_fr9_2').textbox('setValue',firstname+'  '+lastname);  
+                                      
                                       //-------------10. Other surgery ----------------------------------
                                        $('#id_history_patient_fr10_1').textbox('setValue',id);
                                       $('#name_lastname_fr10_1').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr10_1').textbox('setValue',id);
-                                      $('#name_lastname_fr10_1').textbox('setValue',firstname+'  '+lastname);
+                                      $('#name_lastname_fr10_1').textbox('setValue',firstname+'  '+lastname);  
                                       //----------
                                       $('#id_history_patient_fr10_2').textbox('setValue',id);
                                       $('#name_lastname_fr10_2').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr10_2').textbox('setValue',id);
-                                      $('#name_lastname_fr10_2').textbox('setValue',firstname+'  '+lastname);
+                                      $('#name_lastname_fr10_2').textbox('setValue',firstname+'  '+lastname);  
                                       //-----------
                                       $('#id_history_patient_fr10_3').textbox('setValue',id);
                                       $('#name_lastname_fr10_3').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr10_3').textbox('setValue',id);
-                                      $('#name_lastname_fr10_3').textbox('setValue',firstname+'  '+lastname);
+                                      $('#name_lastname_fr10_3').textbox('setValue',firstname+'  '+lastname);  
                                       //---------------
                                       $('#id_history_patient_fr10_4').textbox('setValue',id);
                                       $('#name_lastname_fr10_4').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr10_4').textbox('setValue',id);
-                                      $('#name_lastname_fr10_4').textbox('setValue',firstname+'  '+lastname);
+                                      $('#name_lastname_fr10_4').textbox('setValue',firstname+'  '+lastname);  
                                       //-----------------
                                       $('#id_history_patient_fr10_5').textbox('setValue',id);
                                       $('#name_lastname_fr10_5').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr10_5').textbox('setValue',id);
-                                      $('#name_lastname_fr10_5').textbox('setValue',firstname+'  '+lastname);
+                                      $('#name_lastname_fr10_5').textbox('setValue',firstname+'  '+lastname);  
                                       //-------------------
                                       $('#id_history_patient_fr10_6').textbox('setValue',id);
                                       $('#name_lastname_fr10_6').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr10_6').textbox('setValue',id);
-                                      $('#name_lastname_fr10_6').textbox('setValue',firstname+'  '+lastname);
-
-
-
-
-
+                                      $('#name_lastname_fr10_6').textbox('setValue',firstname+'  '+lastname);  
+                                      
+                                      
+                                      
+                                      
+                                      
                                          //--------11. Other dental procedure -------
                                       $('#id_history_patient_fr11_1').textbox('setValue',id);
                                       $('#name_lastname_fr11_1').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr11_1').textbox('setValue',id);
-                                      $('#name_lastname_fr11_1').textbox('setValue',firstname+'  '+lastname);
-
+                                      $('#name_lastname_fr11_1').textbox('setValue',firstname+'  '+lastname);  
+                                      
                                         //--------11. Other dental procedure  Prosthodontic Treatment-------
                                       $('#id_history_patient_fr11_2').textbox('setValue',id);
                                       $('#name_lastname_fr11_2').textbox('setValue',firstname+'  '+lastname);
-
+                                 
                                      $('#id_history_patient_fr11_2').textbox('setValue',id);
-                                      $('#name_lastname_fr11_2').textbox('setValue',firstname+'  '+lastname);
-
+                                      $('#name_lastname_fr11_2').textbox('setValue',firstname+'  '+lastname);  
+                                      
                                       //-------------- วัน-เดือน-ปี เกิด-------------------
+                                      
 
-
-
-                                   //  showpopup2(id);
-
+                                      
+                                   //  showpopup2(id);           
+                                   
                                       $('#diag3').dialog('open');
                                       $('#id_main').textbox('setValue',id);
                                      // $('#dg_view_fr1').datagrid('reload');
                                      $('#dg_view_fr1').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr1/' + id  });
-                                     $('#dg_view_fr4').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr4/' + id  });
-                                     $('#dg_view_fr6').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr6/' + id  });
-                                     $('#dg_view_fr7').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr7/' + id  });
-                                     $('#dg_view_fr8').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr8/' + id  });
-                                     $('#dg_view_fr9_1').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr9/' + id  });
-                                    $('#dg_view_fr9_2').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr9_2/' + id  });
-                                   $('#dg_view_fr10_1').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr10_1/' + id  });
-
-
+                                     $('#dg_view_fr4').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr4/' + id  }); 
+                                     $('#dg_view_fr6').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr6/' + id  });  
+                                     $('#dg_view_fr7').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr7/' + id  });  
+                                     $('#dg_view_fr8').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr8/' + id  });    
+                                     $('#dg_view_fr9_1').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr9/' + id  });    
+                                    $('#dg_view_fr9_2').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr9_2/' + id  });      
+                                   $('#dg_view_fr10_1').datagrid({  url:'<?=base_url()?>index.php/welcome/showjson_fr10_1/' + id  });   
+                                   
+                                   
                                    //-------------- checkbox treatment------------------
                                    var  url='<?=base_url()?>index.php/welcome/check_treatment';
-                                   var  f =  "id_history_patient";
-
-
-                                 /*
+                                   var  f =  "id_history_patient";  
+                                 
+                           
+                                 /*  
                                   // $tb="tb_psot";
                                   // "id_history_patient"
                                    $.post('<?=base_url()?>index.php/welcome/check_treatment_fr1',{  id:id  },function(data)
@@ -518,19 +500,19 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr1').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr1').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-                                            });
+                                            });       
                                      },'json');
-                                 */
-
-
-
-
-
-                                 //   var   tb9="tb_corrective";
+                                 */    
+                                 
+                                 
+                               
+                                 
+                            
+                                 //   var   tb9="tb_corrective"; 
                                  //    var  tb10="tb_othersurgery";
 
                                     /*
@@ -538,14 +520,14 @@
                  $tb=$this->input->get_post("tb");
               $id=$this->input->get_post("id");
               $f=$this->input->get_post("f");
-                                     */
-
+                                     */ 
+                             
                                       var url='<?=base_url()?>index.php/welcome/check_treatment';
-
+                                      
                                       //---------------1---------------------
                                      $.post(url,{ tb:'tb_psot' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -555,19 +537,19 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr1').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr1').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
+                                                  
+                                              });       
+                                          
                                       } ,'json');
-
-
-                                       //  var   tb4="tb_interceptive";
+                                      
+                                      
+                                       //  var   tb4="tb_interceptive"; 
                                       //-----------------4---------------------------
-                                      //  $tbj1="tb_interceptive";
+                                      //  $tbj1="tb_interceptive"; 
                                        $.post(url,{ tb:'tb_interceptive' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
                                            $.each(data,function(i,k)
@@ -579,22 +561,22 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr4').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr4').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
+                                                  
+                                              });       
                                       } ,'json');
-
-
+                                      
+    
                                     //  var tb6="tb_othersurgery";  //$tb="tb_othersurgery";
                                     //    $tb="tb_bonegraft";
                                     //-----------------5---------------------------
                                      //  $.post(url,{ tb:'tb_interceptive' ,  id:id   , f:'id_history_patient'  },function(data)
                                        $.post(url,{ tb:'tb_bonegraft' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -604,21 +586,21 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr5').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr5').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
+                                                  
+                                              });       
+                                          
                                       } ,'json');
-
-
+                                      
+                                      
                                      //   //   var  tb7="tb_growth";
                                     //-----------------6---------------------------
                                        $.post(url,{ tb:'tb_growth' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -628,21 +610,21 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr6').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr6').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
-                                      } ,'json');
-
-
-                                   //   $tb="tb_growth";   //7. Growth modification
+                                                  
+                                              });       
+                                          
+                                      } ,'json');   
+                                      
+                                      
+                                   //   $tb="tb_growth";   //7. Growth modification 
                                     //-----------------7--------------------------
                                        $.post(url,{ tb:'tb_growth' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -652,22 +634,22 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr7').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr7').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
-                                      } ,'json');
-
+                                                  
+                                              });       
+                                          
+                                      } ,'json');   
+                                      
                                     //   var   tb8="tb_corrective";
                                     //    $tb="tb_orthognathic";
                                     //-----------------7--------------------------
                                      //  $.post(url,{ tb:'tb_corrective' ,  id:id   , f:'id_history_patient'  },function(data)
                                            $.post(url,{ tb:'tb_orthognathic' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -677,21 +659,21 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr8').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr8').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
-                                      } ,'json');
-
-
+                                                  
+                                              });       
+                                          
+                                      } ,'json');   
+                                      
+                                      
                                  //-------------9   $tb="tb_othersurgery";
                                  // $tb="tb_othersurgery";
                                      $.post(url,{ tb:'tb_othersurgery' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -701,22 +683,22 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr9').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr9').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
-                                      } ,'json');
-
-
-                                  //------------10.1 $tb="tb_dentalprocedure";
-                                  // $tb="tb_dentalprocedure";
+                                                  
+                                              });       
+                                          
+                                      } ,'json');    
+                                      
+                                 
+                                  //------------10.1 $tb="tb_dentalprocedure";  
+                                  // $tb="tb_dentalprocedure";   
                                  //  $.post(url,{ tb:'tb_dentalprocedure' ,  id:id   , f:'id_history_patient'  },function(data)
                                     $.post(url,{ tb:'tb_dentalprocedure' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -726,20 +708,20 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr10').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr10').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
-                                      } ,'json');
-                                  //-------------10.2  $tb="tb_prosthodontic";
-                                  //$tb="tb_prosthodontic";
+                                                  
+                                              });       
+                                          
+                                      } ,'json');   
+                                  //-------------10.2  $tb="tb_prosthodontic";  
+                                  //$tb="tb_prosthodontic";   
                                   /*
                                                $.post(url,{ tb:'tb_prosthodontic' ,  id:id   , f:'id_history_patient'  },function(data)
                                       {
-
+                                          
                                            $.each(data,function(i,k)
                                             {
                                                   //alert(i + ""  + k);
@@ -749,20 +731,20 @@
                                                        //$('#ck_fr1').attr('checked',true);
                                                        $('#ck_fr10').linkbutton({ iconCls:'icon-ok' });
                                                        // data-options="iconCls:'icon-large-picture'  "
-                                                  }
+                                                  }  
                                                   else{
                                                        $('#ck_fr10').linkbutton({ iconCls:'icon-large-picture' });
                                                   }
-
-                                              });
-
-                                      } ,'json');
-                                   */
-
+                                                  
+                                              });       
+                                          
+                                      } ,'json'); 
+                                   */   
+                                      
                                       //-------------- diagnosis ให้ปรากฏ ที่ form 5--------------------
                                       //result_analysis_fr6
                                       var url_diag='<?=base_url()?>index.php/welcome/fr_diagnosis';
-
+                                     
                                       $.post(url_diag,{  id: id },function(data)
                                       {
                                            //alert(data);
@@ -770,22 +752,22 @@
                                                 {
                                                       // alert(k.result_analysis);
                                                       $('#result_analysis_fr6').textbox('setValue',k.result_analysis);
-
-
+                                                      
+                                                      
                                                        $('#result_analysis_fr6_2').textbox('setValue',k.result_analysis);
-
-
+                                                       
+                                                       
                                                         $('#result_analysis_fr6_3').textbox('setValue',k.result_analysis);
-
-
+                                                        
+                                                        
                                                 });
                                       },'json');
-
+                                      
                                      //  $('#result_analysis_fr6').textbox('setValue','test');
-
-
-
-
+                                      
+                                      
+                                      
+                                      
                                }
 
                         }
@@ -820,8 +802,8 @@
                         }
                     },
   */
-
-
+  
+                    
                     {
                         text:'Reload',
                         iconCls:'icon-reload',
@@ -845,11 +827,11 @@
                                 //alert(id);
                                 if( id > 0 )
                                 {
-
+        
                                          $.messager.confirm("ต้องการลบข้อมูล","คุณต้องการลบข้อมูลหรือไม่", function(r)
                                             {
-
-
+                                                 
+                                                   
                                     var  url="<?=base_url()?>index.php/welcome/delete_tb1/" +  id ;
                                       $.post(url,function(result){
                                            // alert(result);
@@ -860,61 +842,28 @@
                                                    //$('#dg1').datagrid('reload');
                                                    $('#dg1').datagrid('reload');
                                                 $.messager.alert('สถานะการลบข้อมูล','ลบข้อมูลสำเร็จ');
-
+                                             
                                             }
                                             else if( result == 0 )
                                             {
                                                   //$('#dg1').datagrid('reload');
                                                   $('#dg1').datagrid('reload');
                                                  $.messager.alert('สถานะการลบข้อมูล','ลบข้อมูลผิดพลาด');
-
-                                            }
+                                                  
+                                            }                                    
                                       });
-
-
-
+                                      
+                                         
+                                         
                                             });
-
+                                      
                                 }
                             }
-                        }
-                    }
-                    ,
-
-                    {
-                         text:'Export Excel',
-                         iconCls:'icon-large-picture',
-                         handler:function()
-                         {
-                                // var  link1=$('#txt_main').textbox('getValue');
-                              //   alert(link1);
-                               var  id_doctor=$('#link_export').textbox('getValue');
-
-                               //http://127.0.0.1/dental/index.php/welcome/checklogin#
-
-                                // window.open(url,{ doctor:link_export });
-                              //  open(   url , { doctor: doctor });
-                                //fr_export
-                                // http://127.0.0.1/dental/index.php/welcome/json_patient_ex
-                               //var   url='<?=base_url()?>index.php/welcome/json_patient_ex/'  + doctor ;
-
-                              // window.open(url);
-
-
-
-                              if(  id_doctor > 0 )
-                              {
-                                  //alert(id_doctor);
-                                   url='<?=base_url()?>index.php/welcome/json_patient_ex/'  + id_doctor ;
-                                   window.open(url);
-                              }
-
-
-                         }
-
-                    }
-
-
+                        } 
+                    },
+                    
+                   
+                    
                                  ]
         </script>
 
@@ -980,9 +929,9 @@
                 $(function()
                 {
                       //----- clear form --------
-
-
-
+                      
+                      
+                      
                       $("#dia1").dialog({
                          // title:"เพิ่มข้อมูลประวัติของผู้ป่วย",
                           title: title ,
@@ -997,10 +946,10 @@
                 });
             }
 
-
+            
 
         </script>
-
+        
 
         <script type="text/javascript">
         function  showpopup1() //สำหรับแสดง  dialog1
@@ -1008,7 +957,7 @@
             $(function(){
                 //$.messager.alert('Info','','info');
                     $('#diag1').window('open');  //file-> fr_diagnosis.php
-
+                    
             });
         }
         function  showpopup2() //สำหรับแสดง dialog2  ที่เพิ่มมาใหม่
@@ -1018,14 +967,14 @@
                     $('#diag3').dialog('open');
             });
         }
-
+        
         </script>
 
          <script type="text/javascript">
             //-- คำนวณอายุของบิดา --
              $(function(){
                  $('#calYear1').bind('click',function(){
-
+                      
                        var  strdate=$('#birthdatefahter').datebox('getValue')
                        var  date1=strdate.split(" ");
                         //alert( date1[0]  );
@@ -1040,16 +989,16 @@
                              //alert( showAge );
                              $('#age1').textbox('setValue',c);
                        }
-
-
+                      
+                        
                  });
              });
-
-
+             
+       
                    //-- คำนวณอายุของมารดา --
              $(function(){
                  $('#calYear2').bind('click',function(){
-
+                      
                        var  strdate=$('#birthdatemother').datebox('getValue')
                        var  date1=strdate.split(" ");
                         //alert( date1[0]  );
@@ -1064,17 +1013,17 @@
                              //alert( showAge );
                              $('#age2').textbox('setValue',c);
                        }
-
-
+                      
+                        
                  });
              });
-
-
+             
+             
              //-----ระบุการรักษามาก่อน
-
-
+             
+             
          </script>
-
+         
          <script type="text/javascript" >
               //evertreat3
               //เคยได้รับการรักษามาก่อน : v
@@ -1084,47 +1033,47 @@
                             $('#otherevertreat').textbox('readonly',true);
                             $('#otherevertreat').textbox('setValue',"");
                       });
-
+                      
                           $('#evertreat2').bind('click',function(){
                             //alert('t');
                             $('#otherevertreat').textbox('readonly',true);
                             $('#otherevertreat').textbox('setValue',"");
                       });
-
+                      
                       $('#evertreat3').bind('click',function(){
                             //alert('t');
                             $('#otherevertreat').textbox('readonly',false);
                            // $('#otherevertreat').textbox('setValue',"ระบุ  เคยได้รับการรักษามาก่อน ");
                       });
-
+                  
               });
          </script>
-
-        <script type="text/javascript" >
-            //ระดับพัฒนาการผู้ป่วย :
+         
+        <script type="text/javascript" > 
+            //ระดับพัฒนาการผู้ป่วย : 
             $(function(){
                   /*
                    developmentallevel1
 
 otherdevelopmentallevel
-                   */
-
+                   */  
+                  
                      $('#developmentallevel1').bind('click',function()
                      {
                            //alert('1');
                            $('#otherdevelopmentallevel').textbox('setValue','');
                            $('#otherdevelopmentallevel').textbox('readonly',true);
                      });
-
+                
                      $('#developmentallevel2').bind('click',function()
                      {
                            //alert('2');
                            $('#otherdevelopmentallevel').textbox('readonly',false);
-                           //ระดับพัฒนาการผู้ป่วย :
+                           //ระดับพัฒนาการผู้ป่วย : 
                            $('#otherdevelopmentallevel').textbox('setValue','ระบุระดับพัฒนาการผู้ป่วย');
                      });
-
-
+                   
+                
             });
          </script>
 
@@ -1145,10 +1094,30 @@ otherdevelopmentallevel
 
 	<div style="margin:10px 0;"></div>
 	<div class="easyui-tabs" style="width:1200px;height:700px">
-		<!-- <div title="<?=$title_fr1?>" style="padding:10px"> -->
-                                   <div title="dental record" style="padding:10px">
+		<div title="<?=$title_fr1?>" style="padding:10px">
 
 
+                   <!--
+                    ค้นหาจากโดย : <?php echo nbs(2); ?>
+
+                         <select class="easyui-combogrid" style="width:250px" data-options="
+            panelWidth: 500,
+            idField: 'itemid',
+            textField: 'productname',
+            url: '<?=base_url()?>json/datagrid_data1.json',
+            method: 'get',
+            columns: [[
+                {field:'itemid',title:'Item ID',width:80},
+                {field:'productname',title:'Product',width:120},
+                {field:'listprice',title:'List Price',width:80,align:'right'},
+                {field:'unitcost',title:'Unit Cost',width:80,align:'right'},
+                {field:'attr1',title:'Attribute',width:200},
+                {field:'status',title:'Status',width:60,align:'center'}
+            ]],
+            fitColumns: true
+        ">
+                         </select>
+                   -->
 
 
                    <a href="#"  onclick="  $('#dia_search').dialog('open');  $('#txt_id').textbox('setValue','');   "  class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large' " style="width:100px"> ค้นหา </a>
@@ -1239,12 +1208,6 @@ otherdevelopmentallevel
                    <div style="margin:20px 0 10px 0;"></div>
                   <div class="easyui-tabs" style="width:1200px;height:500px">
 
-
-
-
-
-
-
                          <div title=" Main System   (หน้าหลักโปรแกรม)  " style="padding:10px">
                              <table id="dg1"  name="dg1" class="easyui-datagrid" title="แสดงประวัติผู้ป่วย" style="width:1100px;height:300px"
             data-options="
@@ -1254,7 +1217,7 @@ otherdevelopmentallevel
                                   method:'post',
                                   rownumbers:true,
                                   singleSelect:true,
-                                  columns:[[
+                                  columns:[[  
                                         { field:'firstname',title:'ชื่อ'  },
                                         { field:'lastname',title:'นามสกุล' },
                                         { field:'HN',title:'HN' ,align:'center' },
@@ -1264,18 +1227,16 @@ otherdevelopmentallevel
                                         { field:'CN',   title:'เลข สปสช. ',   align:'center' },
                                    //     { field:'CN',   title:'CN No',   align:'center' },
                                         { field:'seriesnumber',   title:'เลขบัตรประชาชน ',   align:'center' },
-                                    //    { field:'doctor',   title:'แพทย์เจ้าของคนไข้',   align:'left' },
-                                        { field:'doctor_detail',   title:'แพทย์เจ้าของคนไข้',   align:'left' },
-                                        { field:'tel',   title:'เบอร์โทรศัพท์',   align:'left' },
-                                        { field:'address',   title:'ที่อยู่',   align:'left' , formatter:format1() },
-
-
-
+                                        { field:'doctor',   title:'แพทย์เจ้าของคนไข้',   align:'left' },  
+                                        { field:'tel',   title:'เบอร์โทรศัพท์',   align:'left' },  
+                                        
+                                        
+                                       
                                   ]],
                                   toolbar:toolbar ,
                                   ">
-
-            <!--
+                                 
+            <!--                     
         <thead>
             <tr>
                 <th data-options="field:'itemid',width:80">ลำดับที่</th>
@@ -1287,14 +1248,14 @@ otherdevelopmentallevel
                  <th data-options="field:'status',width:150,align:'center'">Other No.</th>
                  <th data-options="field:'status',width:60,align:'center'">CN series.</th>
 
-
+        
 
 
 
             </tr>
         </thead>
            -->
-
+        
     </table>
 
               <div class="easyui-panel">
@@ -1368,11 +1329,11 @@ otherdevelopmentallevel
                         <input class="easyui-textbox" type="text" name="lastname" id="lastname"   style="width:200px;height: 30px;" ></input>
                     </td>
                 </tr>
-
+                
                 <tr>
                     <td>เพศ :</td>
-                    <td>
-                            <input  type="radio"  value="1"  name="sex"  id="sex_m_view" /> ชาย
+                    <td>   
+                            <input  type="radio"  value="1"  name="sex"  id="sex_m_view" /> ชาย 
                            <input type="radio"   name="sex" value="2"   id="sex_w_view"> หญิง
                     </td>
                 </tr>
@@ -1386,7 +1347,7 @@ otherdevelopmentallevel
                     <td>วัน/เดือน/ปี เกิด :</td>
                     <td><input class="easyui-datetimebox"  style="width:200px" id="birthdate" name="birthdate" ></td>
                 </tr>
-
+                
                 <tr>
                     <td> เบอร์โทรศัพท์ :</td>
                     <td> <input   class="easyui-textbox"   name="tel"  style="width:150px;  height: 30px;"   ></td>
@@ -1449,12 +1410,12 @@ otherdevelopmentallevel
                     <td>วัน/เดือน/ปี เกิด :</td>
                     <td>
                         <input class="easyui-datetimebox"  style="width:200px"  id="birthdatefahter"  name="birthdatefahter">
-
+                        
 <!--
                         <a href="javascript:void()"  class="easyui-linkbutton" data-options=" iconCls:'icon-man' "  id="calYear1"  name="calYear1">คำนวณอายุ</a>
                         <input class="easyui-textbox"  id="age1"  name="age1"  style="width:50px; height: 30px;"  > ปี
-    -->
-
+    -->                    
+                        
 
                     </td>
 
@@ -1498,7 +1459,7 @@ otherdevelopmentallevel
                         <a href="javascript:void()"  class="easyui-linkbutton" data-options=" iconCls:'icon-man' "  id="calYear2" name="calYear2" >คำนวณอายุ</a>
                         <input class="easyui-textbox"  style="width:50px; height: 30px;" readonly="true"  id="age2" name="age2" > ปี
                         -->
-
+                          
                     </td>
                 </tr>
 
@@ -1532,9 +1493,9 @@ otherdevelopmentallevel
                                 onSelect:function(rec){
                                    if( $('#benefits').combobox('getValue') == 5 )
                                    {
-                                        $('#otherbenefits').textbox('clear');
+                                        $('#otherbenefits').textbox('clear');     
                                         $('#otherbenefits').textbox('setValue','ระบุสวัสดิการการรักษา');
-                                        $('#otherbenefits').textbox('readonly',false);
+                                        $('#otherbenefits').textbox('readonly',false);    
                                    }
                                    else
                                    {
@@ -1572,7 +1533,7 @@ otherdevelopmentallevel
                 <input type="radio" name="evertreat"  id="evertreat1" value="1"    /> ไม่ทราบ
                 <input type="radio" name="evertreat"  id="evertreat2"  value="2"   /> ไม่เคย
                 <input type="radio" name="evertreat"  id="evertreat3"   value="3" /> เคย ระบุ : <input class="easyui-textbox"  name="otherevertreat"   id="otherevertreat"   style="width:150px;height: 30px;"   />
-
+                
 
             </td>
            </tr>
@@ -1590,28 +1551,10 @@ otherdevelopmentallevel
 
            <tr>
                <td>
-                   ทันตแพทย์เจ้าของคนไข้ :
+                   แพทย์เจ้าของคนไข้ :
                </td>
                <td>
-                    <!--
-                   <input class="easyui-textbox" type="text" name="doctor" id="doctor"  style="width:200px;height:40px;" ></input>
-                 -->
-
-                 <select name="doctor" id="doctor"  class="easyui-combobox"  style="width:200px;">
-                          <option  > เลือกทันตแพทย์ผู้ทำการรักษา </option>
-                          <option value="1">อ.ชุติมาพร</option>
-                          <option value="2">อ.มนเทียร</option>
-                          <option value="3">อ.พูนศักดิ์</option>
-                          <option value="4">อ.ทัศนีย์</option>
-                          <option value="5">อ.อมรรัตน์</option>
-                          <option value="6">อ.เอกสิทธิ์</option>
-                          <option value="7">อ.ณัฐวีร์</option>
-                          <option value="8">อ.สมศักดิ์</option>
-                          <option value="9">อ.สุปราณี</option>
-                          <option value="10">อ.ธิติวัฒน์</option>
-               </select>
-
-
+                   <input class="easyui-textbox" type="text" name="doctor" id="doctor"  ></input>
                </td>
            </tr>
 
@@ -1627,31 +1570,31 @@ otherdevelopmentallevel
                    <td colspan="2">
                       <?=nbs(50)?>
           <a href="javascript:void(0)" class="easyui-linkbutton"
-           iconCls="icon-save"
-           style="width:120px;height:40px;"
+           iconCls="icon-man"
+           style="width:100px;height:40px;"
             onClick="
                $('#fr_add_patient').form('submit',{
                    url:'<?=base_url()?>index.php/welcome/insert_patient/',
                    success:function(data)
                    {
                           //alert(data);
-
+                          
                           if( data == '1' )
                           {
-                                    $.messager.alert('สถานะการบันทึกข้อมูล','บันทึกข้อมูลสำเร็จ');
+                                    $.messager.alert('สถานะการบันทึกข้อมูล','บันทึกข้อมูลสำเร็จ');                     
                                     $('#dia1').dialog('close');
                                     $('#dg1').datagrid('reload');
                           }else if( data == '0' )
                           {
                                    $.messager.alert('สถานะการบันทึกข้อมูล','บันทึกข้อมูลล้มเหลว');
                           }
-
-
+                          
+                         
                    }
                });
 
-              "  >  Save/Update </a>
-                       <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-cancel"  onclick="  $('#dia1').dialog('close');   "  > Close </a>
+              "  >  บันทึกข้อมูล </a>
+                       <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-remove"  onclick="  $('#dia1').dialog('close');   "  > ปิด (Close) </a>      
 
                    </td>
                </tr>
@@ -1673,8 +1616,8 @@ otherdevelopmentallevel
     <table cellpadding="5">
         <tr>
             <td>
-                1. ยาที่ใช้ในระยะครรภ์ 3 เดือน ยาสตรีปรับประจำเดือน ไม่รวมวิตามิน :
-                <input type="Radio" name="tab2_1" value="1"  class="easyui-validatebox" required="true"> ใช่ ระบุ <input class="easyui-textbox"   style="width: 50px;height: 30px;"  />
+                1. ยาที่ใช้ในระยะครรภ์ 3 เดือน ยาสตรีปรับประจำเดือน ไม่รวมวิตามิน : 
+                <input type="Radio" name="tab2_1" value="1"  class="easyui-validatebox" required="true"> ใช่ ระบุ <input class="easyui-textbox"   style="width: 50px;height: 30px;"  />   
                 <br>
                <!-- <input type="Radio" name="tab2_1" value="1"  class="easyui-validatebox" required="true" checked="true"> ไม่  -->
                 <input  type="radio"    name="tab2_1" />  จำไม่ได้
@@ -1686,16 +1629,16 @@ otherdevelopmentallevel
           <tr>
             <td>
                 2. สูบบุหรี่หรืออยู่ใกล้ชิดผู้สูบบุหร่ีในระยะครรภ์ 3 เดือนแรก : <input type="Radio" name="tab2_2" value="1"  class="easyui-validatebox" required="true"> ใช่ ระบุ <input class="easyui-textbox" type="text" name="subject"   style="width:50px"> มวลต่อวัน
-
+               
                 <!-- <input type="Radio" name="tab2_2" value="1"  class="easyui-validatebox" required="true" checked="true"/> ไม่ -->
-
+            
                 <br>
                     <input  type="radio"  name="tab2_2"  />  จำไม่ได้
-
-
+               
+         
                     <input  type="radio"  name="tab2_2"  />    ไม่ใช่
-
-
+            
+             
 
 
 
@@ -1704,29 +1647,22 @@ otherdevelopmentallevel
 
                   <tr>
             <td>
-                3. ดื่มเครื่องดื่มแอลกอฮอล์ในระยะตั้งครรภ์ 3 เดือนแรก : <input type="Radio" name="tab2_3" value="1"  class="easyui-validatebox" required="true"> ใช่  ระบุ <input class="easyui-textbox" type="text" name="subject"   style="width:50px"></input>  ซีซีต่อวัน
-
+                3. ดื่มเครื่องดื่มแอลกอฮอล์ในระยะตั้งครรภ์ 3 เดือนแรก : <input type="Radio" name="tab2_3" value="1"  class="easyui-validatebox" required="true"> ใช่  ระบุ <input class="easyui-textbox" type="text" name="subject"   style="width:50px"></input>  ซีซีต่อวัน 
+                
                 <br>
-
+                
               <!--  <input type="Radio" name="tab2_3" value="1"  class="easyui-validatebox" required="true" checked="true"> ไม่  -->
-
+         
 
               <input  type="radio"  name="tab2_3"  /> จำไม่ได้
-
-
+       
+           
             <input  type="radio"  name="tab2_3"  />  ไม่ใช่
+            
+             
 
 
 
-
-
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2"  align="center">
-                <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:120px;height: 40px;  "  iconCls="icon-save"   > Save/Update </a>
-                <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-cancel"  onclick="  $('#dia1').dialog('close');   "  > Close </a>
             </td>
         </tr>
 
@@ -1797,14 +1733,6 @@ otherdevelopmentallevel
                     </td>
                 </tr>
 
-
-         <tr>
-            <td colspan="2"  align="center">
-                <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:120px;height: 40px;  "  iconCls="icon-save"   > Save/Update </a>
-                <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-cancel"  onclick="  $('#dia1').dialog('close');   "  > Close </a>
-            </td>
-        </tr>
-
                 <!--
                  <tr>
                     <td>
@@ -1849,20 +1777,11 @@ otherdevelopmentallevel
                     <td><input class="easyui-textbox" style="width:70px;height: 30px;"></td>
                 </tr>
 
-                <!--
                 <tr>
                      <td></td>
                     <td><input type="submit" value="Submit"></input></td>
 
                 </tr>
-                -->
-
-                <tr>
-            <td colspan="2"  align="center">
-                <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:120px;height: 40px;  "  iconCls="icon-save"   > Save/Update </a>
-                <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-cancel"  onclick="  $('#dia1').dialog('close');   "  > Close </a>
-            </td>
-        </tr>
 
             </table>
         </div>
@@ -1950,37 +1869,37 @@ otherdevelopmentallevel
   <script type="text/javascript" >
      function  view_patient(id)
      {
-
+         
                                                                             var  url='<?=base_url()?>index.php/welcome/call_history_patient/' + id;
                                                                    $.post(url,{ id_history_patient:id },function(data)
                                                                       {
                                                                              //alert(data);
                                                                               $.each(data,function(index,key)
                                                                                 {
-
+                                                                                     
                                                                                         var  HN=key.HN;
                                                                                         // alert( HN );
                                                                                         //    fr_view_patient
-                                                                                       //HN_view
+                                                                                       //HN_view   
                                                                                        $('#HN_view').textbox('setValue',HN);
                                                                                      //  var  DN=key.DN
-
+                                                                                     
                                                                                        $('#DN_view').textbox('setValue',key.DN);
                                                                                        //key.	othnumber;
                                                                                        $('#othnumber_view').textbox('setValue',key.othnumber);
                                                                                        $('#CN_view').textbox('setValue',key.CN);
-
+                                                                                       
                                                                                        $('#seriesnumber_view').textbox('setValue',key.seriesnumber);
                                                                                         $('#firstname_view').textbox('setValue',key.firstname);
-                                                                                        $('#lastname_view').textbox('setValue',key.lastname);
-
-
+                                                                                        $('#lastname_view').textbox('setValue',key.lastname);  
+                                                                                        
+                                                                                        
                                                                                          //alert( key.sex);
-
-
+                                                                                          
+                                                                                        
                                                                                           var  sex = key.sex;
-
-
+                                                                                           
+                                                                                           
                                                                                           if(  sex == 1  )
                                                                                           {
                                                                                                   //sex_w_view
@@ -1994,100 +1913,97 @@ otherdevelopmentallevel
                                                                                                //  $('#sex_w_view').attr('checked',true);
                                                                                                  $('#txt_sex_view').textbox('setValue','หญิง');
                                                                                           }
-
-
+                                                                                          
+                                                                                          
                                                                                           //file1
                                                                                           var  file1= key.filename;
                                                                                           //alert( file1 );
-
+                                                                                            
                                                                                           if( file1 !=  ''  )
                                                                                           {
                                                                                              // $('#file1').attr('')
                                                                                              //  $('#img_view').attr('src','<?=base_url()?>upload/632244.jpg');
                                                                                                 $('#img_view').attr('src','<?=base_url()?>upload/' +  file1  );
                                                                                           }
-
-                                                                                           //id_history_patient_view
-
-                                                                                           $('#id_history_patient_view').textbox('setValue',key.id_history_patient);
-
+                                                                                          
+                                                                                          
                                                                                            $('#birthdate_view').textbox('setValue',key.birthdate);
-
+                                                                                           
                                                                                            // alert( key.tel  );
                                                                                         $('#tel_view').textbox('setValue',key.tel);
-
+                                                                                        
                                                                                         $('#address_view').textbox('setValue',key.address);
-
+                                                                                        
                                                                                         $('#nationality_view').textbox('setValue',key.nationality);
-
+                                                                                        
                                                                                         $('#race_view').textbox('setValue',key.race);
-
+                                                                                        
                                                                                         $('#religion_view').textbox('setValue',key.religion);
-
+                                                                                        
                                                                                         $('#namefather_view').textbox('setValue',key.namefather);
-
+                                                                                        
                                                                                         $('#fatherlastname_view').textbox('setValue',key.fatherlastname);
-
+                                                                                        
                                                                                         $('#career_view').textbox('setValue',key.career);
-
+                                                                                        
                                                                                         $('#birthdatefahter_view').textbox('setValue',key.birthdatefahter);
-
+                                                                                        
                                                                                         $('#disease_view').textbox('setValue',key.disease);
-
+                                                                                        
                                                                                      //   $('#disease_view').textbox('setValue',key.disease);
-
+                                                                                     
                                                                                         $('#mothername_view').textbox('setValue',key.mothername);
-
+                                                                                        
                                                                                         $('#motherlastname_view').textbox('setValue',key.motherlastname);
-
+                                                                                        
                                                                                         $('#mothercareer_view').textbox('setValue',key.mothercareer);
-
+                                                                                        
                                                                                         $('#birthdatemother_view').textbox('setValue',key.birthdatemother);
-
+                                                                                        
                                                                                         $('#diseasemother_view').textbox('setValue',key.diseasemother);
-
+                                                                                        
                                                                                         //$('#diseasemother_view').textbox('setValue',key.diseasemother);
-
+                                                                                        
                                                                                         $('#spousename_view').textbox('setValue',key.spousename);
-
+                                                                                        
                                                                                         $('#spouselastname_view').textbox('setValue',key.spouselastname);
-
-
+                                                                                        
+                                                                                        
                                                                                       //  $('#otherbenefits')
-
+                                                                                      
                                                                                       $('#otherbenefits_view').textbox('setValue',key.otherbenefits);
-
+                                                                                      
                                                                                      // $('#numberbenefits')
-
+                                                                                      
                                                                                         $('#numberbenefits_view').textbox('setValue',key.numberbenefits);
-
+                                                                                        
                                                                                         $('#treatmentfacility_view').textbox('setValue',key.treatmentfacility);
-
+                                                                                        
                                                                                         $('#otherdevelopmentallevel_view').textbox('setValue',key.otherdevelopmentallevel);
-
-
+                                                                                    
+                                                                                  
                                                                                       //เคยได้รับการรักษามาก่อน
                                                                                         var  evertreat=key.evertreat;
                                                                                         if(  evertreat == 1  )
                                                                                         {
-                                                                                            $('#evertreat1_view').attr('checked',true);
+                                                                                            $('#evertreat1_view').attr('checked',true);  
                                                                                         }
                                                                                         else if( evertreat == 2 )
                                                                                         {
                                                                                             //evertreat2
-                                                                                             $('#evertreat2_view').attr('checked',true);
+                                                                                             $('#evertreat2_view').attr('checked',true);  
                                                                                         }
                                                                                          else if( evertreat == 3 )
                                                                                          {
-                                                                                             $('#evertreat3_view').attr('checked',true);
+                                                                                             $('#evertreat3_view').attr('checked',true);  
                                                                                          }
-
+                                                                                         
                                                                                        //  alert(key.otherevertreat);
                                                                                          //otherevertreat
                                                                                        //  $('#otherevertreat')
                                                                                        var  otherevertreat=key.otherevertreat;
                                                                                        $('#otherevertreat_view').textbox('setValue',otherevertreat);
-
+                                                                                       
                                                                                        //ระดับพัฒนาการผู้ป่วย :
                                                                                        var  developmentallevel=key.developmentallevel;
                                                                                      //  alert(developmentallevel);
@@ -2100,20 +2016,20 @@ otherdevelopmentallevel
                                                                                              //$('#developmentallevel_text').attr('checked',true);
                                                                                              $('#developmentallevel_view').attr('checked',true);
                                                                                        }
-
+                                                                                       
                                                                                         var  otherdevelopmentallevel=key.otherdevelopmentallevel;
                                                                                        // alert( otherdevelopmentallevel );
                                                                                         $('#otherdevelopmentallevel_view').textbox('setValue', otherdevelopmentallevel );
-
+                                                                                        
                                                                                         var  doctor=key.doctor;
                                                                                         $('#doctor_view').textbox('setValue',doctor);
-
-
+                                                                                        
+                                                                                        
                                                                                 });
-
-
-                                                                      },'json');
-
+                                                                                
+                                                                                      
+                                                                      },'json'); 
+                                                                      
      }
   </script>
 
@@ -2126,13 +2042,6 @@ otherdevelopmentallevel
 
             <form id="fr_view_patient" method="post"  enctype="multipart/form-data"  novalidate="novalidate">
             <table cellpadding="5">
-
-                 <tr>
-                    <td>
-                          <input class="easyui-textbox" type="text" name="id_history_patient_view"  id="id_history_patient_view"  data-options="required:false" style="width: 40px  "  readonly="true" ></input>
-                    </td>
-                 </tr>
-
 
                  <tr>
                     <td>HN   :</td>
@@ -2184,12 +2093,12 @@ otherdevelopmentallevel
                         <input class="easyui-textbox" type="text" name="lastname_view" id="lastname_view"   style="width:200px;height: 30px;" ></input>
                     </td>
                 </tr>
-
+                
                 <tr>
                     <td>เพศ :</td>
-                    <td>
+                    <td> 
                         <!--
-                        <input  type="radio"  value="1"  name="sex_view"  id="sex_m_view"  checked="false" /> ชาย
+                        <input  type="radio"  value="1"  name="sex_view"  id="sex_m_view"  checked="false" /> ชาย 
                            <input type="radio"   name="sex_view" value="2"   id="sex_w_view"  checked="false"  > หญิง
                            -->
                            <input class="easyui-textbox"  id="txt_sex_view"   style="width:100px;height: 40px;align:'center'  "  readonly="true"  />
@@ -2199,26 +2108,26 @@ otherdevelopmentallevel
                 <tr>
                     <td>รูปถ่าย :</td>
                     <td>
-
+                        
                         <!--
                         <input name="file1" id="file1"   class="f1 easyui-filebox"></input>
                         <br>
                          -->
-
+                         
                         <input type="image"   id="img_view"  width="350"  height="350"   />
-
+                    
                     </td>
                 </tr>
 
                  <tr>
                     <td>วัน/เดือน/ปี เกิด :</td>
                     <td>
-
+                        
                         <input class="easyui-textbox"  style="width:200px" id="birthdate_view" name="birthdate_view"    >
-
+                    
                     </td>
                 </tr>
-
+                
                 <tr>
                     <td> เบอร์โทรศัพท์ :</td>
                     <td> <input   class="easyui-textbox"   name="tel_view"  id="tel_view" style="width:150px;  height: 30px;"    ></td>
@@ -2226,7 +2135,7 @@ otherdevelopmentallevel
 
                 <tr>
                     <td>ที่อยู่ :</td>
-                    <td><input class="easyui-textbox" type="text" name="address_view" id="address_view"  style="width: 300px;height: 30px;"   ></input></td>
+                    <td><input class="easyui-textbox" type="text" name="address_view" id="address_view"  style="width: 300px;height: 30px;"  readonly="true" ></input></td>
                 </tr>
 
                 <tr>
@@ -2280,8 +2189,8 @@ otherdevelopmentallevel
                 <tr>
                     <td>วัน/เดือน/ปี เกิด :</td>
                     <td>
-
-
+                        
+                        
                         <input class="easyui-textbox"    id="birthdatefahter_view"  name="birthdatefahter_view"  style="width: 100px;height: 30px;"  readonly="true"  >
 
                         <!--
@@ -2325,21 +2234,21 @@ otherdevelopmentallevel
                  <tr>
                     <td>วัน/เดือน/ปี เกิด :</td>
                     <td>
-
+                        
                         <!--
                         <input class="easyui-textbox"  style="width:200px"  name="birthdatemother"  id="birthdatemother" />
                         -->
-
-
+                        
+                        
                          <input class="easyui-textbox"  style="width:200px"  name="birthdatemother_view"  id="birthdatemother_view" />
-
-
+                        
+                        
                        <!--
                         <a href="javascript:void()"  class="easyui-linkbutton" data-options=" iconCls:'icon-man' "  id="calYear2" name="calYear2" >คำนวณอายุ</a>
                         -->
-
+                        
                      <!--   <input class="easyui-textbox"  style="width:50px; height: 30px;" readonly="true"  id="age2" name="age2" > ปี  -->
-
+                          
                     </td>
                 </tr>
 
@@ -2373,9 +2282,9 @@ otherdevelopmentallevel
                                 onSelect:function(rec){
                                    if( $('#benefits').combobox('getValue') == 5 )
                                    {
-                                        $('#otherbenefits').textbox('clear');
+                                        $('#otherbenefits').textbox('clear');     
                                         $('#otherbenefits').textbox('setValue','ระบุสวัสดิการการรักษา');
-                                        $('#otherbenefits').textbox('readonly',false);
+                                        $('#otherbenefits').textbox('readonly',false);    
                                    }
                                    else
                                    {
@@ -2413,7 +2322,7 @@ otherdevelopmentallevel
                 <input type="radio" name="evertreat_view"  id="evertreat1_view" value="1"    /> ไม่ทราบ
                 <input type="radio" name="evertreat_view"  id="evertreat2_view"  value="2"   /> ไม่เคย
                 <input type="radio" name="evertreat_view"  id="evertreat3_view"   value="3" /> เคย ระบุ : <input class="easyui-textbox"  name="otherevertreat_view"   id="otherevertreat_view"   style="width:150px;height: 30px;"   />
-
+                
 
             </td>
            </tr>
@@ -2434,11 +2343,11 @@ otherdevelopmentallevel
                    แพทย์เจ้าของคนไข้ :
                </td>
                <td>
-
-
+                   
+                   
                    <input class="easyui-textbox" type="text" name="doctor_view" id="doctor_view"  id="doctor"   ></input>
-
-
+                   
+                   
                </td>
            </tr>
 
@@ -2446,11 +2355,11 @@ otherdevelopmentallevel
                <tr>
                    <td>ระดับพัฒนาการผู้ป่วย :  </td>
                    <td>
-                       <input type="radio" name="developmentallevel_view" value="1"  id="developmentallevel1_view"   class="easyui-validatebox" >
-                       ปกติ
+                       <input type="radio" name="developmentallevel_view" value="1"  id="developmentallevel1_view"   class="easyui-validatebox" > 
+                       ปกติ 
                      <!--  <input type="radio" name="developmentallevel_text"   id="developmentallevel2_view"   value="2"  class="easyui-validatebox" required="true" > -->
                        <input type="radio" name="developmentallevel_view"   id="developmentallevel2_view"   value="2"  class="easyui-validatebox" required="true" >
-                       ไม่ปกติ   <?=nbs(5)?>คำอธิบายเพิ่มเติม
+                       ไม่ปกติ   <?=nbs(5)?>คำอธิบายเพิ่มเติม 
                        <input class="easyui-textbox"  id="otherdevelopmentallevel_view"  name="otherdevelopmentallevel_view"  style="width: 150px;height: 30px;"   />
                    </td>
                </tr>
@@ -2458,8 +2367,8 @@ otherdevelopmentallevel
                <tr>
                    <td colspan="2">
                       <?=nbs(50)?>
-
-                   <!--
+                       
+                   <!--    
           <a href="javascript:void(0)" class="easyui-linkbutton"
            iconCls="icon-man"
            style="width:100px;height:40px;"
@@ -2469,55 +2378,28 @@ otherdevelopmentallevel
                    success:function(data)
                    {
                           //alert(data);
-
+                          
                           if( data == '1' )
                           {
-                                    $.messager.alert('สถานะการบันทึกข้อมูล','บันทึกข้อมูลสำเร็จ');
+                                    $.messager.alert('สถานะการบันทึกข้อมูล','บันทึกข้อมูลสำเร็จ');                     
                                     $('#dia1').dialog('close');
                                     $('#dg1').datagrid('reload');
                           }else if( data == '0' )
                           {
                                    $.messager.alert('สถานะการบันทึกข้อมูล','บันทึกข้อมูลล้มเหลว');
                           }
-
-
+                          
+                         
                    }
                });
 
               "  >  บันทึกข้อมูล </a>
-                       <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-remove"  onclick="  $('#dia1').dialog('close');   "  > ปิด (Close) </a>
+                       <a href="javascript:void(0)"  class="easyui-linkbutton"  style=" width:100px;height: 40px;  "  iconCls="icon-remove"  onclick="  $('#dia1').dialog('close');   "  > ปิด (Close) </a>     
                        -->
-
-
-                       <a href="javascript:void(0)"  class="easyui-linkbutton"
-                              data-options="
-                            onClick:function(){
-
-                                $('#fr_view_patient').form('submit',{
-                                        url:'<?=base_url()?>index.php/welcome/update_patient',
-                                        success:function(data)
-                                        {
-                                             //alert(data);
-                                              if( data == 1 )
-                                              {
-                                                     $.messager.alert('สถานะในการรปรับปรุงข้อมูล','ปรับปรุงข้อมูลสำเร็จ');
-                                                     $('#dg1').datagrid('reload');
-                                                     $('#dia1_view').window('close');
-                                              }
-                                              else{
-                                                   $.messager.alert('สถานะในการรปรับปรุงข้อมูล','ปรับปรุงข้อมูลล้มเหลว');
-                                                   $('#dg1').datagrid('reload');
-                                              }
-
-
-                                        }
-                                });
-
-
-                            }
-                              "
-                       style="width: 100px;height: 40px;"   iconCls='icon-edit'    >แก้ไข</a>
-                       <a href="javascript:void(0)" class="easyui-linkbutton"  style="width:120px;height:40px;"  iconCls="icon-cancel"  onClick=" $('#dia1_view').window('close'); "  >ปิด (Close)</a>
+                       
+                       
+                       <a href="javascript:void(0)"  class="easyui-linkbutton"   style="width: 100px;height: 40px;"   iconCls='icon-edit'    >แก้ไข</a>
+                       
 
                    </td>
                </tr>
@@ -2717,10 +2599,6 @@ otherdevelopmentallevel
 
     </div>
 <!----  แสดงประวัติผู้ป่วย --->
-
-<!--   <form  id="fr_export"  method="post"  enctype="multipart/form-data"  novalidate="novalidate"  > -->
-      <input  class="easyui-textbox"    readonly=true    id="link_export"  name="link_export"   style="width:20px;height:30jpx;"   />
-<!--   </form> -->
 
 
     </body>

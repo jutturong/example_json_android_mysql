@@ -65,6 +65,19 @@ class Json extends CI_Controller {
                     echo   json_encode($rows);
                      
                }
+               
+               #----- โปรแกรมสมุนไพร
+               # http://localhost/dental/index.php/json/tb_herb
+               public function tb_herb()
+               {
+                     $tb="tb_herb";
+                     $q=$this->db->get($tb);
+                    foreach($q->result() as $row)
+                    {
+                        $rows[]=$row;
+                    }
+                    echo   json_encode($rows);
+               }
         
         
 }
