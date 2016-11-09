@@ -60,12 +60,14 @@ public class MainActivity extends AppCompatActivity {
 
         // autoCompleteTextView1
         final AutoCompleteTextView autocomplete1 = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView1);
+        final  List<String> arrList = new ArrayList<String>();
 
+        /*
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, COUNTRIES);
 
         autocomplete1.setAdapter(adapter);
-
+*/
 
 
 
@@ -103,8 +105,11 @@ public class MainActivity extends AppCompatActivity {
 
                         MyArrList.add(map);
 
-
-
+                        arrList.add( c.getString("name") );
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
+                                android.R.layout.simple_spinner_item,
+                                arrList);
+                        autocomplete1.setAdapter(adapter);
 
                        // Toast.makeText(MainActivity.this,String.valueOf(  c.getString("name") ),Toast.LENGTH_SHORT).show();
 
@@ -115,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
                     sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
                             new String[] {"name", "name_sci", }, new int[] {R.id.Col_name, R.id.Col_name_sci, });
                     listView1.setAdapter(sAdap);
+
 
 
 

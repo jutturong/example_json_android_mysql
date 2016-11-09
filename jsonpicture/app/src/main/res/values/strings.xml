@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">โปรแกรมสมุนไพรไทย version 1.0.0</string>
     <string name="name1">Start</string>
+    <string name="label1">ค้นหาราย :</string>
 </resources>
