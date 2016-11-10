@@ -1,21 +1,20 @@
 package com.example.linux.myapplication;
 
+import android.app.TabActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
+import android.widget.TabHost;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -36,14 +35,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends TabActivity {
 
-    public  String  url="http://192.168.2.120/dental/index.php/json/tb_herb";
+    public  String  url="http://192.168.2.112/dental/index.php/json/tb_herb";
 
     private static final String[] COUNTRIES = new String[] {
             "Belgium", "France", "Italy", "Germany", "Spain", "Thailand", "Taiwan"
     };
 
+    TabHost mTabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +62,14 @@ public class MainActivity extends AppCompatActivity {
         final AutoCompleteTextView autocomplete1 = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView1);
         final  List<String> arrList = new ArrayList<String>();
 
-        /*
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
+         //--tab
+        mTabHost = (TabHost) findViewById(android.R.id.tabhost);
+        mTabHost = getTabHost();
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test1").setIndicator("INDEX").setContent(R.id.tab1));
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("SEARCh").setContent(R.id.tab2));
 
-        autocomplete1.setAdapter(adapter);
-*/
 
+        mTabHost.setCurrentTab(0);
 
 
         final LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -101,7 +102,9 @@ public class MainActivity extends AppCompatActivity {
                         map.put("name", c.getString("name"));
                         map.put("name_sci", c.getString("name_sci"));
                         map.put("name_local", c.getString("name_local"));
-
+                        map.put("general", c.getString("general"));
+                        map.put("properties", c.getString("properties"));
+                        map.put("usage", c.getString("usage"));
 
                         MyArrList.add(map);
 
@@ -118,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                     SimpleAdapter sAdap;
 
                     sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
-                            new String[] {"name", "name_sci", }, new int[] {R.id.Col_name, R.id.Col_name_sci, });
+                            new String[] {"name", "properties", }, new int[] {R.id.Col_name, R.id.Col_name_sci, });
                     listView1.setAdapter(sAdap);
 
 
@@ -141,14 +144,27 @@ public class MainActivity extends AppCompatActivity {
                             String name_local = MyArrList.get(position).get("name_local")
                                     .toString();
 
+                            String general = MyArrList.get(position).get("general")
+                                    .toString();
+
+                            String properties = MyArrList.get(position).get("properties")
+                                    .toString();
+
+                            String usage = MyArrList.get(position).get("usage")
+                                    .toString();
+
+
                             // Toast.makeText(MainActivity.this,String.valueOf(  sname ),Toast.LENGTH_SHORT).show();
 
-                            viewDetail.setIcon(android.R.drawable.btn_star_big_on);
-                          //  viewDetail.setTitle("แสดงรายละเอียดย่อย");
+                            viewDetail.setIcon(android.R.drawable.btn_minus);
+                            viewDetail.setTitle("LOADING..");
 
                             viewDetail.setMessage(
-                                    "ชื่อวิทยาศาสตร์ : " + name_sci + "\n"
-                                    + "ชื่อสามัญ : " + name_local + "\n"
+                                    "ชื่อวิทยาศาสตร์ : " + name_sci + "\n" + "\n"
+                                    + "ชื่อสามัญ : " + name_local + "\n" + "\n"
+                                            + "ลักษณะทั่วไป : " + general + "\n" + "\n"
+                                            + "สรรพคุณทางสมุนไพร : " + general + "\n"  + "\n"
+                                            + "สรรพคุณเพิ่มเติม : " + usage + "\n" + "\n"
                                                  );
 
                             viewDetail.setPositiveButton("OK",
