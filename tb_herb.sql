@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14.1
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2016 at 11:59 AM
--- Server version: 5.6.25
--- PHP Version: 5.6.25
+-- Generation Time: Nov 10, 2016 at 08:57 PM
+-- Server version: 5.5.49-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `dental`
@@ -27,40 +27,25 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `tb_herb` (
-  `id_herb` int(11) NOT NULL,
+  `id_herb` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf16_bin NOT NULL,
   `name_sci` varchar(100) COLLATE utf16_bin NOT NULL,
-  `name_local` varchar(100) COLLATE utf16_bin NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+  `name_local` varchar(100) COLLATE utf16_bin NOT NULL,
+  `general` text COLLATE utf16_bin NOT NULL,
+  `properties` text COLLATE utf16_bin NOT NULL,
+  `usage` text COLLATE utf16_bin NOT NULL,
+  PRIMARY KEY (`id_herb`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_bin AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tb_herb`
 --
 
-INSERT INTO `tb_herb` (`id_herb`, `name`, `name_sci`, `name_local`) VALUES
-(1, 'กระเจียน', 'Polyalthia cerasoides (Roxb.) Bent.ex Bedd', 'ทรายเด่น พญารากดำ นมแมวป่า'),
-(2, 'กระตังใบ', 'Leea indica Merr', 'ต้างไก่ใหญ่ กระตังใบ'),
-(3, 'กระทือ', 'Zingiber zerumbet Smith', 'กระทือ กระทือป่า กะแวน กะแอน เฮียงแดง');
+INSERT INTO `tb_herb` (`id_herb`, `name`, `name_sci`, `name_local`, `general`, `properties`, `usage`) VALUES
+(1, 'กระเจียน', 'Polyalthia cerasoides (Roxb.) Bent.ex Bedd', 'ทรายเด่น พญารากดำ นมแมวป่า', 'เป็นพันธุ์ไม้พุ่มขนาดเล็กถึงขนาดกลางในความสูงระหว่าง 3 ถึง 8 เมตร\r\nลำต้นเปล่าตรง ผิวลำต้นเรียบ ใบเป็นใบเดี่ยว รูปใบหอกแกมขอบขนาน\r\nใบอ่อนมีขนนุ่มๆ  ทั่วใบ ดอกเป็นดอกเดีี่ยวออกเป็นกลุ่มตามง่ามใบ\r\nกลีบเลี้ยง 3 กลีบ กลีบดอกสีเขียวอ่อน เรียงสลับกันสองชั้น แต่ละดอก\r\nจะมีเกสรตัวผู้อยู่เป็นจำนวนมาก ผลเป็นกลุ่ม อยู่บนแกนตุ้มกลม\r\nรูปทรงป้อมกลม ปลายติ่ง ผลอ่อนสีเขียว ผลแก่ จัดสีน้ำตาลแดง', 'ราก - แก้ไข้, แก้กษัย บำรุงกำลังในบุรุษ\r\nใบสด - ตำพอกรักษาแผลสด\r\nเนื้อไม้ - แก้วัณโรค แก้ปวดเมื่อย', 'ราก - แห้ง ต้มน้ำดื่ม แก้ไข้ แก้กษัย บำรุงกำลังในบุรุษ\r\nใบ - สด ตำพอกรักษาแผลสด\r\nเนิื้อไม้ - แห้ง ต้มดื่ม แก้วัณโรค แก้ปวดเมื่อย'),
+(2, 'กระตังใบ', 'Leea indica Merr', 'ต้างไก่ใหญ่ กระตังใบ', '', '', ''),
+(3, 'กระทือ', 'Zingiber zerumbet Smith', 'กระทือ กระทือป่า กะแวน กะแอน เฮียงแดง', '', '', '');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tb_herb`
---
-ALTER TABLE `tb_herb`
-  ADD PRIMARY KEY (`id_herb`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tb_herb`
---
-ALTER TABLE `tb_herb`
-  MODIFY `id_herb` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
