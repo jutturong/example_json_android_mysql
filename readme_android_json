@@ -215,5 +215,57 @@ autocomplete html ให้ดูตัวอย่างที่ 2 ข้า�
 http://www.thaicreate.com/mobile/android-autocompletetextview.html
 
 
+#------------------ autocomplete  json code-------------------
+  -xml file 
+<AutoCompleteTextView
+
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:completionThreshold="1"
+        android:text="" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+
+  -java file
+// Permission StrictMode
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
+   final AutoCompleteTextView autocomplete1 = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView1);
+        final  List<String> arrList = new ArrayList<String>();
+
+ try {
+
+  JSONArray data = new JSONArray(getJSONUrl(url));
+             for(int i = 0; i < data.length(); i++)
+                    {
+                       
+                       JSONObject c = data.getJSONObject(i);
+
+ arrList.add( c.getString("name") );
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
+                                android.R.layout.simple_spinner_item,
+                                arrList);
+                        autocomplete1.setAdapter(adapter);
+
+
+
+                     }
+
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+
 
 
