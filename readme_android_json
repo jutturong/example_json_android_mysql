@@ -216,6 +216,12 @@ http://www.thaicreate.com/mobile/android-autocompletetextview.html
 
 
 #------------------ autocomplete  json code-------------------
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    useLibrary 'org.apache.http.legacy'
+
+
   -xml file 
 <AutoCompleteTextView
 
