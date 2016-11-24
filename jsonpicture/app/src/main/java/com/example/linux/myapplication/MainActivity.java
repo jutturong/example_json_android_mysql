@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TabHost;
@@ -196,7 +197,10 @@ public class MainActivity extends TabActivity {
 
 
 
-
+   final ImageView imageView1=(ImageView) findViewById(R.id.imageView1);
+       // imageView1.setImageResource(R.drawable.bg_main);
+      //  imageView1.setImageResource(R.drawable.test1);
+        imageView1.setImageResource(R.drawable.test2);
 
 
 
