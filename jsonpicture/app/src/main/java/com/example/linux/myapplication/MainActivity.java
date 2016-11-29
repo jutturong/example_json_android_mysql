@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -38,7 +39,7 @@ import java.util.List;
 
 public class MainActivity extends TabActivity {
 
-    public  String  url="http://192.168.2.112/dental/index.php/json/tb_herb";
+    public  String  url="http://192.168.2.120/dental/index.php/json/tb_herb";
 
     private static final String[] COUNTRIES = new String[] {
             "Belgium", "France", "Italy", "Germany", "Spain", "Thailand", "Taiwan"
@@ -78,11 +79,11 @@ public class MainActivity extends TabActivity {
         final ListView listView1=(ListView) findViewById(R.id.listView1);
 
 
-
+        
         final Button btn1=(Button) findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
 
 
                 try {
@@ -155,6 +156,8 @@ public class MainActivity extends TabActivity {
                                     .toString();
 
 
+
+
                             // Toast.makeText(MainActivity.this,String.valueOf(  sname ),Toast.LENGTH_SHORT).show();
 
                             viewDetail.setIcon(android.R.drawable.btn_minus);
@@ -176,6 +179,7 @@ public class MainActivity extends TabActivity {
                                             dialog.dismiss();
                                         }
                                     });
+                           // viewDetail.setView()
 
                             viewDetail.show();
 
