@@ -2,13 +2,14 @@ package com.example.linux.myapplication;
 
 import android.app.TabActivity;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -17,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -29,17 +31,31 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends TabActivity {
 
-    public  String  url="http://192.168.2.120/dental/index.php/json/tb_herb";
+
+    private static final String TAG = "ERROR";
+    private static final int IO_BUFFER_SIZE = 4 * 1024;
+
+
+
+    public  String  url="http://192.168.2.112/dental/index.php/json/tb_herb";
+
+    public  String url_img1="http://192.168.2.112/dental/upload/35.jpg";
 
     private static final String[] COUNTRIES = new String[] {
             "Belgium", "France", "Italy", "Germany", "Spain", "Thailand", "Taiwan"
@@ -77,6 +93,12 @@ public class MainActivity extends TabActivity {
         final LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
 
         final ListView listView1=(ListView) findViewById(R.id.listView1);
+
+
+        final ImageView imageView1=(ImageView) findViewById(R.id.imageView1);
+        // imageView1.setImageResource(R.drawable.bg_main);
+        //  imageView1.setImageResource(R.drawable.test1);
+        //imageView1.setImageResource(R.drawable.test2);
 
 
         
@@ -122,11 +144,27 @@ public class MainActivity extends TabActivity {
 
                     SimpleAdapter sAdap;
 
-                    sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
-                            new String[] {"name", "properties", }, new int[] {R.id.Col_name, R.id.Col_name_sci, });
-                    listView1.setAdapter(sAdap);
 
 
+
+
+                    // String url = txt1.getText().toString();
+                    try
+                    {
+                        imageView1.setImageBitmap(loadBitmap(url_img1));
+
+
+                        sAdap = new SimpleAdapter(MainActivity.this, MyArrList, R.layout.activity_column,
+                                new String[] {"name", "properties", }, new int[] {R.id.Col_name, R.id.Col_name_sci,  });
+                        listView1.setAdapter(sAdap);
+
+
+                    } catch (Exception e) {
+                        // When Error
+                        imageView1.setImageResource(android.R.drawable.ic_menu_report_image);
+                        Toast.makeText(MainActivity.this,"Load Image Failed.",
+                                Toast.LENGTH_LONG).show();
+                    }
 
 
 
@@ -158,6 +196,8 @@ public class MainActivity extends TabActivity {
 
 
 
+
+
                             // Toast.makeText(MainActivity.this,String.valueOf(  sname ),Toast.LENGTH_SHORT).show();
 
                             viewDetail.setIcon(android.R.drawable.btn_minus);
@@ -184,6 +224,10 @@ public class MainActivity extends TabActivity {
                             viewDetail.show();
 
 
+
+
+
+
                         }
 
                     });
@@ -201,14 +245,63 @@ public class MainActivity extends TabActivity {
 
 
 
-   final ImageView imageView1=(ImageView) findViewById(R.id.imageView1);
-       // imageView1.setImageResource(R.drawable.bg_main);
-      //  imageView1.setImageResource(R.drawable.test1);
-        imageView1.setImageResource(R.drawable.test2);
+
 
 
 
     }
+
+
+    public static Bitmap loadBitmap(String url) {
+        Bitmap bitmap = null;
+        InputStream in = null;
+        BufferedOutputStream out = null;
+
+        try {
+            in = new BufferedInputStream(new URL(url).openStream(), IO_BUFFER_SIZE);
+
+            final ByteArrayOutputStream dataStream = new ByteArrayOutputStream();
+            out = new BufferedOutputStream(dataStream, IO_BUFFER_SIZE);
+            copy(in, out);
+            out.flush();
+
+            final byte[] data = dataStream.toByteArray();
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            //options.inSampleSize = 1;
+
+            bitmap = BitmapFactory.decodeByteArray(data, 0, data.length,options);
+        } catch (IOException e) {
+            Log.e(TAG, "Could not load Bitmap from: " + url);
+        } finally {
+            closeStream(in);
+            closeStream(out);
+        }
+
+        return bitmap;
+    }
+
+
+    private static void closeStream(Closeable stream) {
+        if (stream != null) {
+            try {
+                stream.close();
+            } catch (IOException e) {
+                android.util.Log.e(TAG, "Could not close stream", e);
+            }
+        }
+    }
+
+
+    private static void copy(InputStream in, OutputStream out) throws IOException {
+        byte[] b = new byte[IO_BUFFER_SIZE];
+        int read;
+        while ((read = in.read(b)) != -1) {
+            out.write(b, 0, read);
+        }
+    }
+
+
+
 
 
 
